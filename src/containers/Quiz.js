@@ -39,7 +39,11 @@ export default class Quiz extends Component {
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
     if (this.state.pitanja.length > 0) {
-    pitanjeKomponenta = <Pitanje provera = {this.provera}   pitanje = {trenPitanje} /> }
+     pitanjeKomponenta = <Pitanje provera = {this.provera}  
+                                  pitanje = {trenPitanje} 
+                                  ponudjeniOdg = {trenPitanje.ponudjeniOdg}
+                                   tipPitanja = {trenPitanje.tip} />
+                                   }
     let dugmeKomponenta = <NextDugme  slPitanje = {this.nextDugmeHandler}/>
     if (this.state.poslednjePitanje) {
        dugmeKomponenta = <RezDugme/>

@@ -1,17 +1,20 @@
 import React from 'react'
-import Pomocna from '../../hoc/Pomocna';
+
+import PonudjeniOdgCHEKBOX from './ponudjeniOdgOpcije/ponudjeniOdgCHEKBOX';
+import PonudjeniOdgINPUT from './ponudjeniOdgOpcije/ponudjeniOdgINPUT';
+import PonudjeniOdgSLIKE from './ponudjeniOdgOpcije/ponudjeniOdgSLIKE';
 
 const ponudjeniOdgovoriSwic =(props)=> {
     let ponudjenOdg = null;
-    switch(props.tipPitanja){
+    switch(props.tip){
         case ('success'):
-        ponudjenOdg = 'cekbox komponenta'
+        ponudjenOdg = <PonudjeniOdgCHEKBOX odg = {props.ponudjeniOdg}/>
         break; 
         case ('danger'):
-        ponudjenOdg = 'input text komponenta'
+        ponudjenOdg = <PonudjeniOdgINPUT odg = {props.ponudjeniOdg}/>
         break; 
         case ('warning'):
-        ponudjenOdg = 'slike komponenta'
+        ponudjenOdg = <PonudjeniOdgSLIKE odg = {props.ponudjeniOdg} />
         break; 
         case ('info'):
         ponudjenOdg = 'DND komponenta'
@@ -19,7 +22,7 @@ const ponudjeniOdgovoriSwic =(props)=> {
         default: ponudjenOdg = null;
     }
     return(
-        <Pomocna>ponudjenOdg</Pomocna>
+        {ponudjenOdg}
    
     )
 }
