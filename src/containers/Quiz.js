@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import pitanja from '../assests/pitanjaData';
 import Pitanje from '../components/Pitanje/Pitanje';
 import NextDugme from '../components/dugmad/nextDugme';
+import RezDugme from '../components/dugmad/rezultatDugme';
 
 
 export default class Quiz extends Component {
@@ -39,11 +40,15 @@ export default class Quiz extends Component {
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
     if (this.state.pitanja.length > 0) {
     pitanjeKomponenta = <Pitanje provera = {this.provera}   pitanje = {trenPitanje} /> }
+    let dugmeKomponenta = <NextDugme  slPitanje = {this.nextDugmeHandler}/>
+    if (this.state.poslednjePitanje) {
+       dugmeKomponenta = <RezDugme/>
+    }
     return (
       <div> 
       {pitanjeKomponenta}
-      {dugmadKomponenta}
-      <NextDugme  slPitanje = {this.nextDugmeHandler}/>
+      {dugmeKomponenta}
+      
       </div>
     )
   }
