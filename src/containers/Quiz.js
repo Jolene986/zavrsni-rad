@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import pitanja from '../assests/pitanjaData';
+import Pitanje from '../components/Pitanje/Pitanje';
 
 
 export default class Quiz extends Component {
@@ -13,9 +14,8 @@ export default class Quiz extends Component {
   render() {
     return (
       <div> 
-          
-        pitanje komponenta
-        sledece pitanje dugme
+      <Pitanje />
+        <p>sledece pitanje</p>
       </div>
     )
   }
