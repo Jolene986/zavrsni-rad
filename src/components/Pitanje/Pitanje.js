@@ -5,7 +5,7 @@ const pitanje =(props)=> {
     return(
     <div>
         <p>Pitanje</p>
-        <p>Ponudjeni Odgovori</p>
+        <p>Ponudjeni Odgovori swich</p>
         <HintDugme/>
 
     </div>
