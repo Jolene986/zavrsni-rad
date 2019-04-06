@@ -1,11 +1,12 @@
 import React from 'react'
+import HintDugme from '../dugmad/hintDugme';
 
 const pitanje =(props)=> {
     return(
     <div>
         <p>Pitanje</p>
         <p>Ponudjeni Odgovori</p>
-        <p>Hint dugme</p>
+        <HintDugme/>
 
     </div>
     )

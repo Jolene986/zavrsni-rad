@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import pitanja from '../assests/pitanjaData';
 import Pitanje from '../components/Pitanje/Pitanje';
+import NextDugme from '../components/dugmad/nextDugme';
 
 
 export default class Quiz extends Component {
@@ -15,7 +16,7 @@ export default class Quiz extends Component {
     return (
       <div> 
       <Pitanje />
-        <p>sledece pitanje</p>
+      <NextDugme />
       </div>
     )
   }
