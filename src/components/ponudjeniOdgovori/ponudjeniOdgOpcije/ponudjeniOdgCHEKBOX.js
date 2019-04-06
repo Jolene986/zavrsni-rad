@@ -5,16 +5,10 @@ import React from 'react'
      ponudjeniOdg.map(item => {
          return (
             <label className = 'ponudjenOdgovor'>
-            <input type= "checkbox" key = {item.id} onChange={} value={}/> 
+            <input type= "checkbox" key = {item} onChange={} value={item}/> {/*i key je item jer je to samo jedan ponudjen odg*/ }
             </label>
             
          )
      })
-
-  return (
-    <div>
-      
-    </div>
-  )
 }
 export default ponudjeniOdgCHEKBOX;
