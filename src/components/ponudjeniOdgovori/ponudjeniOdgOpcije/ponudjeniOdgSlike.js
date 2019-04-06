@@ -1,6 +1,6 @@
 import React from 'react'
 
- const ponudjeniOdgCHEKBOX =(props) =>{
+ const ponudjeniOdgSLIKE =(props) =>{
      let ponudjeniOdg = props.ponudjeniOdg //  iz stejta this.state.pitanja[curentQuestion].odgovori
      ponudjeniOdg.map((item, i) => {
          return (
@@ -15,4 +15,4 @@ import React from 'react'
     </div>
   )
 }
-export default ponudjeniOdgCHEKBOX;
+export default ponudjeniOdgSLIKE;
