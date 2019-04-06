@@ -1,5 +1,5 @@
 import React from 'react'
-import Aux from '../../hoc/Pomocna';
+import Pomocna from '../../hoc/Pomocna';
 
 const ponudjeniOdgovoriSwic =(props)=> {
     let ponudjenOdg = null;
@@ -19,7 +19,7 @@ const ponudjeniOdgovoriSwic =(props)=> {
         default: ponudjenOdg = null;
     }
     return(
-        <Aux>ponudjenOdg</Aux>
+        <Pomocna>ponudjenOdg</Pomocna>
    
     )
 }
