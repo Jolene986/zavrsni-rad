@@ -4,7 +4,7 @@ import HintDugme from '../dugmad/hintDugme';
 const pitanje =(props)=> {
     return(
     <div>
-        <p>Pitanje</p>
+        <h2>{props.pitanje.pitanje}</h2>
         <p>Ponudjeni Odgovori swich</p>
         <HintDugme/>
 

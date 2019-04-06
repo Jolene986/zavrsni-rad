@@ -13,16 +13,16 @@ export default class Quiz extends Component {
         rezultat:0
       }
       nextDugmeHandler =()=>{
-        console.log(this.state.answers)
+      
       //koji je br trenutno pitanje
-      let pitanjeBr = this.state.brTrenPitanje;
+      let pitanjeBr = this.state.trenPitanje;
       // ukupan br pitanja
       let ukupanBrPitanja = this.state.pitanja.length;
       pitanjeBr ++
       // ako je br pitanja veci od indexa trenutnog pitanja setujemo stejt da prebaci na sledece
       if (ukupanBrPitanja > pitanjeBr) {
         //setujemo stejt
-        this.setState(prevState => {return  { trenPitanje: prevState.trenPitanje +1}})
+        this.setState(prevState => {return {trenPitanje: prevState.trenPitanje +1}});
         //a ako je to poslednje pitanje
         if (ukupanBrPitanja === pitanjeBr +1) {
           this.setState({poslednjePitanje:true}) 
@@ -30,14 +30,20 @@ export default class Quiz extends Component {
       }
       /*if (this.provera()) { ovde treba da se poziva rezultat provere koji vraca true ili false i onda setState...
         }*/
-  
-
-      }
+         }
+     provera = ()=> {
+       console.log('provera metod')
+     }
   render() {
+    let pitanjeKomponenta = 'Pitanje Komponenta';
+    const trenPitanje = this.state.pitanja[this.state.trenPitanje];
+    if (this.state.pitanja.length > 0) {
+    pitanjeKomponenta = <Pitanje provera = {this.provera}   pitanje = {trenPitanje} /> }
     return (
       <div> 
-      <Pitanje />
-      <NextDugme slPitanje = {this.nextDugmeHandler}/>
+      {pitanjeKomponenta}
+      {dugmadKomponenta}
+      <NextDugme  slPitanje = {this.nextDugmeHandler}/>
       </div>
     )
   }

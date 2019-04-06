@@ -2,7 +2,7 @@ import React from 'react'
 
 const nextDugme =(props)=> {
     return(
-    <button>Sledece Pitanje</button>
+    <button onClick = {props.slPitanje}>Sledece Pitanje</button>
     )
 }
 export default nextDugme
