@@ -1,12 +1,9 @@
-import React from 'react'
-import Pomocna from '../../../hoc/Pomocna'
+import React, { Component } from 'react'
 
-
-
-
-const ponudjeniOdgInput =(props) =>{
-   return ( 
-     
+export default class ponudjeniOdgInput extends Component {
+  render() {
+    return (
       <input type="text"/>
-       )}
-export default ponudjeniOdgInput;
+    )
+  }
+}

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function PodgovorSlike(props) {
-    
+export default class PodgovorSlike extends Component {
+  render() {
     return (
-        
-        <img src= {props.odgovor} alt="slika" width = '300' height = '300'/>
-      )
+        <img src= {this.props.odgovor} alt="slika" width = '300' height = '300'/>
+    )
+  }
 }

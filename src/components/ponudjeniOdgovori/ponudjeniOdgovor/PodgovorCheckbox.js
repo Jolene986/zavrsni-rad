@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function pOdgovorCheckbox(props) {
-
+export default class PodgovorCheckbox extends Component {
+  
+  render() {
     return (
       <label >
-    <input type="checkbox" value ={props.odgovor}/> 
-    {props.odgovor}
+    <input type="checkbox" value ={this.props.odgovor}/> 
+    {this.props.odgovor}
     </label>
-  )
+    )
+  }
 }
