@@ -29,21 +29,19 @@ export default class Quiz extends Component {
           this.setState({poslednjePitanje:true}) 
         }
       }
-      this.proveraTacnostiMetod();
-      /*if (this.provera()) { ovde treba da se poziva rezultat provere koji vraca true ili false i onda setState...
-        }*/
-         }
+      let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
+      console.log('this.state.datOdgovor na next dugmetu  ' + this.state.datOdgovor)
+      if (tacanOdg === this.state.datOdgovor) {
+        console.log('tacno');
+      }
+      else console.log('netacno');
+      
+    }
      proveraTacnostiMetod = (vrednost)=> {
-       let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
-       let datOdgovor = vrednost;
+        let datOdgovor = vrednost;
        this.setState({datOdgovor:datOdgovor})
-       console.log(datOdgovor);
-       if (tacanOdg === this.state.datOdgovor) {
-         console.log('tacno');
-       }
-       else console.log('netacno');
+       console.log('iz provera tacnosti metod' +this.state.datOdgovor);}
        
-     }
   render() {
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];

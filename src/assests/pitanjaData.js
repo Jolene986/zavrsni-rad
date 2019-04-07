@@ -31,7 +31,7 @@ let pitanja = [
         pitanje: "Tvoje omiljeno zivotinja",
         ponudjeniOdg: [],
         hint: "Neki hint",
-        can : "zec"
+        tacanOdg : "zec"
     },
     {
         id: 4,

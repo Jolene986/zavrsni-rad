@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class PodgovorCheckbox extends Component {
   onChangeHendler = (event)=> {
+    console.log('iz event hendlera' + event.target.value)
     this.props.provera(event.target.value)
   }
   render() {

@@ -12,10 +12,10 @@ const ponudjeniOdgovoriSwic =(props)=> {
         ponudjenOdg = <PonudjeniOdgCheckbox odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         case ('danger'):
-        ponudjenOdg = <PonudjeniOdgInput odg = {props.ponudjeniOdg}/>
+        ponudjenOdg = <PonudjeniOdgInput odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         case ('warning'):
-        ponudjenOdg = <PonudjeniOdgSlike odg = {props.ponudjeniOdg} />
+        ponudjenOdg = <PonudjeniOdgSlike odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         case ('info'):
         ponudjenOdg = 'DND komponenta'
