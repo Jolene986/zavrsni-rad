@@ -1,18 +1,24 @@
 import React from 'react'
+import Pomocna from '../../../hoc/Pomocna'
+import PodgovorSlike from '../ponudjeniOdgovor/PodgovorSlike'
 
- const ponudjeniOdgSLIKE =(props) =>{
-     let ponudjeniOdg = props.odg;
-     ponudjeniOdg.map((item, i) => {
-         return (
-            <img id = {i}  src= {item} alt="slika"/>
-            
-         )
-     })
+
+ const ponudjeniOdgSlike =(props) =>{
+  let ponudjeniOdg = props.odg;
+ const odgovor = ponudjeniOdg.map((item, i) => { return  <PodgovorSlike odgovor={item} key={i}/>} )
 
   return (
-    <div>
-      
-    </div>
+    <Pomocna>{odgovor}</Pomocna>
   )
 }
-export default ponudjeniOdgSLIKE;
+export default ponudjeniOdgSlike;
+
+
+
+
+
+ 
+    
+   
+    
+   

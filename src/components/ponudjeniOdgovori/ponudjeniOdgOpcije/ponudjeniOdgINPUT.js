@@ -1,20 +1,12 @@
 import React from 'react'
+import Pomocna from '../../../hoc/Pomocna'
 
- const ponudjeniOdgINPUT =(props) =>{
-     let ponudjeniOdg = props.odg; 
-     ponudjeniOdg.map(item => {
-         return (
-            <label className = 'ponudjenOdgovor'>
-            <input type= "text" key = {item} /> 
-            </label>
-            
-         )
-     })
 
-  return (
-    <div>
-      
-    </div>
-  )
-}
-export default ponudjeniOdgINPUT;
+
+
+const ponudjeniOdgInput =(props) =>{
+   return ( 
+     
+      <input type="text"/>
+       )}
+export default ponudjeniOdgInput;

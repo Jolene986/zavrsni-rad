@@ -1,20 +1,21 @@
 import React from 'react'
 
-import PonudjeniOdgCHEKBOX from './ponudjeniOdgOpcije/ponudjeniOdgCHEKBOX';
-import PonudjeniOdgINPUT from './ponudjeniOdgOpcije/ponudjeniOdgINPUT';
-import PonudjeniOdgSLIKE from './ponudjeniOdgOpcije/ponudjeniOdgSLIKE';
+import PonudjeniOdgCheckbox from './ponudjeniOdgOpcije/ponudjeniOdgCheckbox';
+import PonudjeniOdgInput from './ponudjeniOdgOpcije/ponudjeniOdgInput';
+import PonudjeniOdgSlike from './ponudjeniOdgOpcije/ponudjeniOdgSlike';
+import Pomocna from '../../hoc/Pomocna'
 
 const ponudjeniOdgovoriSwic =(props)=> {
     let ponudjenOdg = null;
     switch(props.tip){
         case ('success'):
-        ponudjenOdg = <PonudjeniOdgCHEKBOX odg = {props.ponudjeniOdg}/>
+        ponudjenOdg = <PonudjeniOdgCheckbox odg = {props.ponudjeniOdg}/>
         break; 
         case ('danger'):
-        ponudjenOdg = <PonudjeniOdgINPUT odg = {props.ponudjeniOdg}/>
+        ponudjenOdg = <PonudjeniOdgInput odg = {props.ponudjeniOdg}/>
         break; 
         case ('warning'):
-        ponudjenOdg = <PonudjeniOdgSLIKE odg = {props.ponudjeniOdg} />
+        ponudjenOdg = <PonudjeniOdgSlike odg = {props.ponudjeniOdg} />
         break; 
         case ('info'):
         ponudjenOdg = 'DND komponenta'
@@ -22,7 +23,8 @@ const ponudjeniOdgovoriSwic =(props)=> {
         default: ponudjenOdg = null;
     }
     return(
-        {ponudjenOdg}
+        <Pomocna>{ponudjenOdg}</Pomocna>
+        
    
     )
 }

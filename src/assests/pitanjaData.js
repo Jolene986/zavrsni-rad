@@ -35,13 +35,13 @@ let pitanja = [
     },
     {
         id: 4,
-        tip:"worning",
+        tip:"warning",
         pitanje: "Tvoje omiljeno biljka",
         ponudjeniOdg: [
-            "1.jpg",
-            "2.jpg",
-            "3.jpg",
-            "4.jpg"
+            '../../../assests/images/1.jpg',
+            "../../../assests/images/2.jpg",
+            "../../../assests/images/3.jpg",
+            "../../../assests/images/4.jpg"
         ],
         tacanOdg : "2"
     }

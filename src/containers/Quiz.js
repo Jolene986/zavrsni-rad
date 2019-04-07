@@ -38,6 +38,7 @@ export default class Quiz extends Component {
   render() {
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
+   
     if (this.state.pitanja.length > 0) {
      pitanjeKomponenta = <Pitanje provera = {this.provera}  
                                   pitanje = {trenPitanje} 
