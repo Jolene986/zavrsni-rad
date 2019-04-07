@@ -6,7 +6,10 @@ const pitanje =(props)=> {
     return(
     <div>
         <h2>{props.pitanje.pitanje}</h2>
-        <PonudjeniOdgovoriSwic tip = {props.tipPitanja} ponudjeniOdg ={props.ponudjeniOdg}/>
+        <PonudjeniOdgovoriSwic tip = {props.tipPitanja}
+         ponudjeniOdg ={props.ponudjeniOdg} 
+         provera = {props.proveraTacnosti}
+        />
         <HintDugme/>
 
     </div>

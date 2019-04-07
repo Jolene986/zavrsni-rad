@@ -29,23 +29,33 @@ export default class Quiz extends Component {
           this.setState({poslednjePitanje:true}) 
         }
       }
+      this.proveraTacnostiMetod();
       /*if (this.provera()) { ovde treba da se poziva rezultat provere koji vraca true ili false i onda setState...
         }*/
          }
-     provera = ()=> {
-       console.log('provera metod')
+     proveraTacnostiMetod = (vrednost)=> {
+       let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
+       let datOdgovor = vrednost;
+       this.setState({datOdgovor:datOdgovor})
+       console.log(datOdgovor);
+       if (tacanOdg === this.state.datOdgovor) {
+         console.log('tacno');
+       }
+       else console.log('netacno');
+       
      }
   render() {
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
    
     if (this.state.pitanja.length > 0) {
-     pitanjeKomponenta = <Pitanje provera = {this.provera}  
+     pitanjeKomponenta = <Pitanje   
                                   pitanje = {trenPitanje} 
                                   ponudjeniOdg = {trenPitanje.ponudjeniOdg}
-                                   tipPitanja = {trenPitanje.tip} />
+                                  tipPitanja = {trenPitanje.tip} 
+                                  proveraTacnosti = {this.proveraTacnostiMetod}/>
                                    }
-    let dugmeKomponenta = <NextDugme  slPitanje = {this.nextDugmeHandler}/>
+    let dugmeKomponenta = <NextDugme  slPitanje = {this.nextDugmeHandler} />
     if (this.state.poslednjePitanje) {
        dugmeKomponenta = <RezDugme/>
     }

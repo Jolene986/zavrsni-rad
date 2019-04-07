@@ -9,7 +9,7 @@ const ponudjeniOdgovoriSwic =(props)=> {
     let ponudjenOdg = null;
     switch(props.tip){
         case ('success'):
-        ponudjenOdg = <PonudjeniOdgCheckbox odg = {props.ponudjeniOdg}/>
+        ponudjenOdg = <PonudjeniOdgCheckbox odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         case ('danger'):
         ponudjenOdg = <PonudjeniOdgInput odg = {props.ponudjeniOdg}/>
