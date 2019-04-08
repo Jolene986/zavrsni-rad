@@ -2,7 +2,7 @@ import React from 'react'
 
 const rezDugme =(props)=> {
     return(
-    <button >Vidi Rezultat</button>
+    <button onClick = {props.vidiRezultat}>Vidi Rezultat</button>
     )
 }
 export default rezDugme

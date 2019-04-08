@@ -14,7 +14,17 @@ export default class Quiz extends Component {
         rezultat:0
       }
       nextDugmeHandler =()=>{
+        //provera tacnosti i davanje bodova
+        let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
+        let datOdgovor = this.state.datOdgovor;
+        let vrednost = this.state.pitanja[this.state.trenPitanje].vrednost;
+        console.log('tacan odg je:' + tacanOdg + '  dat odgovor je:'+ datOdgovor)
+        if (tacanOdg === datOdgovor){ 
+          this.setState(prevState => {return {rezultat: prevState.rezultat + vrednost}})}
+          this.sledecePitanje();
       
+    }
+    sledecePitanje = ()=> {
       //koji je br trenutno pitanje
       let pitanjeBr = this.state.trenPitanje;
       // ukupan br pitanja
@@ -29,18 +39,22 @@ export default class Quiz extends Component {
           this.setState({poslednjePitanje:true}) 
         }
       }
-      let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
-      console.log('this.state.datOdgovor na next dugmetu  ' + this.state.datOdgovor)
-      if (tacanOdg === this.state.datOdgovor) {
-        console.log('tacno');
-      }
-      else console.log('netacno');
-      
     }
      proveraTacnostiMetod = (vrednost)=> {
-        let datOdgovor = vrednost;
-       this.setState({datOdgovor:datOdgovor})
-       console.log('iz provera tacnosti metod' +this.state.datOdgovor);}
+        //let datOdgovor = vrednost;
+        console.log('vrednost koju prima provera tacnosti metod' + vrednost)
+       this.setState({datOdgovor : vrednost})
+      // console.log('iz provera tacnosti metod' +this.state.datOdgovor);
+      
+      }
+
+       vidiRezultat=()=> {
+         //provera tacnosti i davanje bodova
+        let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
+        if (tacanOdg === this.state.datOdgovor){ 
+          this.setState(prevState => {return {rezultat: prevState.rezultat +1}})}
+         console.log('sa vidi rez dugmeta' + this.state.rezultat)
+       }
        
   render() {
     let pitanjeKomponenta = 'Pitanje Komponenta';
@@ -55,8 +69,9 @@ export default class Quiz extends Component {
                                    }
     let dugmeKomponenta = <NextDugme  slPitanje = {this.nextDugmeHandler} />
     if (this.state.poslednjePitanje) {
-       dugmeKomponenta = <RezDugme/>
+       dugmeKomponenta = <RezDugme vidiRezultat={this.vidiRezultat}/>
     }
+    console.log('iz rendera ' + this.state.rezultat)
     return (
       <div> 
       {pitanjeKomponenta}

@@ -1,4 +1,5 @@
 let pitanja = [
+    
     {
         id: 1,
         tip:"success",
@@ -10,7 +11,21 @@ let pitanja = [
             "zima"
         ],
         hint: "Neki hint",
-        tacanOdg : "prolece"
+        tacanOdg : "prolece",
+        vrednost: 5
+    },
+    {
+        id: 5,
+        tip:"warning",
+        pitanje: "Tvoje omiljeno biljka",
+        ponudjeniOdg: [
+            '1',
+            "2",
+            "3",
+            "4"
+        ],
+        tacanOdg : "slika1",
+        vrednost: 10
     },
     {
         id: 2,
@@ -23,7 +38,8 @@ let pitanja = [
             "krompir"
         ],
         hint: "Neki hint",
-        tacanOdg : "kupus"
+        tacanOdg : "kupus",
+        vrednost: 5
     },
     {
         id: 3,
@@ -31,19 +47,21 @@ let pitanja = [
         pitanje: "Tvoje omiljeno zivotinja",
         ponudjeniOdg: [],
         hint: "Neki hint",
-        tacanOdg : "zec"
+        tacanOdg : "zec",
+        vrednost: 20
     },
     {
         id: 4,
         tip:"warning",
-        pitanje: "Tvoje omiljeno biljka",
+        pitanje: "Izbaci uljeza!",
         ponudjeniOdg: [
-            '../../../assests/images/1.jpg',
-            "../../../assests/images/2.jpg",
-            "../../../assests/images/3.jpg",
-            "../../../assests/images/4.jpg"
+            '1',
+            "2",
+            "3",
+            "4"
         ],
-        tacanOdg : "2"
+        tacanOdg : "slika1",
+        vrednost: 10
     }
     
     ]
