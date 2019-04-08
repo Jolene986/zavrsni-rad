@@ -14,7 +14,7 @@ export default class Quiz extends Component {
         poslednjePitanje: false,
         rezultat:0
       }
-      nextDugmeHandler =()=>{
+      provera =()=>{
         //provera tacnosti i davanje bodova
         let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
         let datOdgovor = this.state.datOdgovor;
@@ -22,10 +22,11 @@ export default class Quiz extends Component {
         console.log('tacan odg je:' + tacanOdg + '  dat odgovor je:'+ datOdgovor)
         if (tacanOdg === datOdgovor){ 
           this.setState(prevState => {return {rezultat: prevState.rezultat + vrednost}})}
-          this.sledecePitanje();
+          
       
     }
-    sledecePitanje = ()=> {
+    nextDugmeHandler = ()=> {
+      this.provera();
       //koji je br trenutno pitanje
       let pitanjeBr = this.state.trenPitanje;
       // ukupan br pitanja
@@ -50,12 +51,9 @@ export default class Quiz extends Component {
       }
 
        vidiRezultat=()=> {
-         //provera tacnosti i davanje bodova
-        let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
-        if (tacanOdg === this.state.datOdgovor){ 
-          this.setState(prevState => {return {rezultat: prevState.rezultat +1}})}
-         console.log('sa vidi rez dugmeta' + this.state.rezultat)
+         this.provera();
        }
+
        
   render() {
     let pitanjeKomponenta = 'Pitanje Komponenta';
