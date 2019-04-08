@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import pitanja from '../assests/pitanjaData';
 import Pitanje from '../components/Pitanje/Pitanje';
 import Dugme from '../components/dugmad/dugme'
+import Modal from '../components/UI/Modal/Modal'
+import Rezultat from '../components/Rezultat/Rezultat'
 
 
 export default class Quiz extends Component {
@@ -69,6 +71,7 @@ export default class Quiz extends Component {
     let dugmeKomponenta = <Dugme btnType='Next' clicked = {this.nextDugmeHandler}>Sledece Pitanje</Dugme>
     if (this.state.poslednjePitanje) {
        dugmeKomponenta = <Dugme btnType='Rezultat'clicked={this.vidiRezultat}>Vidi Rezultat</Dugme>
+       
     }
     console.log('iz rendera ' + this.state.rezultat)
     return (
@@ -76,6 +79,7 @@ export default class Quiz extends Component {
       {pitanjeKomponenta}
       {dugmeKomponenta}
       <Dugme btnType='Hint'>HINT</Dugme>
+      <Modal><Rezultat bodovi = {this.state.rezultat}/></Modal>
       </div>
     )
   }
