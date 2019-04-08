@@ -75,7 +75,7 @@ export default class Quiz extends Component {
       <div> 
       {pitanjeKomponenta}
       {dugmeKomponenta}
-      
+      <Dugme btnType='Hint'>HINT</Dugme>
       </div>
     )
   }
