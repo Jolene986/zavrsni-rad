@@ -1,5 +1,5 @@
 import React from 'react'
-import HintDugme from '../dugmad/hintDugme';
+import Dugme from '../dugmad/dugme';
 import PonudjeniOdgovoriSwic from '../ponudjeniOdgovori/ponudjeniOdgovoriSwic';
 
 const pitanje =(props)=> {
@@ -10,7 +10,7 @@ const pitanje =(props)=> {
          ponudjeniOdg ={props.ponudjeniOdg} 
          provera = {props.proveraTacnosti}
         />
-        <HintDugme/>
+        <Dugme btnType='Hint'>HINT</Dugme>
 
     </div>
     )

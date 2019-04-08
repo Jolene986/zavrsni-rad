@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import pitanja from '../assests/pitanjaData';
 import Pitanje from '../components/Pitanje/Pitanje';
-import NextDugme from '../components/dugmad/nextDugme';
-import RezDugme from '../components/dugmad/rezultatDugme';
+import Dugme from '../components/dugmad/dugme'
 
 
 export default class Quiz extends Component {
@@ -67,9 +66,9 @@ export default class Quiz extends Component {
                                   tipPitanja = {trenPitanje.tip} 
                                   proveraTacnosti = {this.proveraTacnostiMetod}/>
                                    }
-    let dugmeKomponenta = <NextDugme  slPitanje = {this.nextDugmeHandler} />
+    let dugmeKomponenta = <Dugme btnType='Next' clicked = {this.nextDugmeHandler}>Sledece Pitanje</Dugme>
     if (this.state.poslednjePitanje) {
-       dugmeKomponenta = <RezDugme vidiRezultat={this.vidiRezultat}/>
+       dugmeKomponenta = <Dugme btnType='Rezultat'clicked={this.vidiRezultat}>Vidi Rezultat</Dugme>
     }
     console.log('iz rendera ' + this.state.rezultat)
     return (
