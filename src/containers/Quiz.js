@@ -12,7 +12,8 @@ export default class Quiz extends Component {
         datOdgovor: '', 
         trenPitanje: 0,
         poslednjePitanje: false,
-        rezultat:0
+        rezultat:0,
+        finished: false
       }
       provera =()=>{
         //provera tacnosti i davanje bodova
@@ -50,9 +51,14 @@ export default class Quiz extends Component {
       
       }
 
-       vidiRezultat=()=> {
+     vidiRezultat=()=> {
          this.provera();
+         this.setState({finished:true})
        }
+    neIdemNaRezultate = () => {
+       // ovde ce da ide ruter za pocetnu
+       this.setState({finished : false})
+    }
 
        
   render() {
@@ -77,7 +83,7 @@ export default class Quiz extends Component {
       {pitanjeKomponenta}
       {dugmeKomponenta}
       <Dugme btnType='Hint'>HINT</Dugme>
-      <Modal><Rezultat bodovi = {this.state.rezultat}/></Modal>
+      <Modal show={this.state.finished} modalClosed = {this.neIdemNaRezultate}><Rezultat bodovi = {this.state.rezultat}/></Modal>
       </div>
     )
   }
