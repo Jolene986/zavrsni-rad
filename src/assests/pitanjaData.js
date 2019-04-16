@@ -13,7 +13,7 @@ let pitanja = [
         hint: "Neki hint",
         tacanOdg : "prolece",
         vrednost: 5,
-        tipKviza: 'zivotinje'
+        tipKviza: 'biljke'
     },
     {
         id: 5,

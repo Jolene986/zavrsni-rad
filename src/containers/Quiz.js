@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pitanja from '../assests/pitanjaData';
+
 import Pitanje from '../components/Pitanje/Pitanje';
 import Dugme from '../components/dugmad/dugme'
 import Modal from '../components/UI/Modal/Modal'
@@ -8,7 +8,7 @@ import Rezultat from '../components/Rezultat/Rezultat'
 
 export default class Quiz extends Component {
     state = {
-        pitanja: pitanja,
+        pitanja: this.props.pitanija,
         datOdgovor: '', 
         trenPitanje: 0,
         poslednjePitanje: false,
@@ -26,7 +26,10 @@ export default class Quiz extends Component {
           
       
     }
+
+    
     nextDugmeHandler = ()=> {
+
       this.provera();
       //koji je br trenutno pitanje
       let pitanjeBr = this.state.trenPitanje;
@@ -77,7 +80,7 @@ export default class Quiz extends Component {
        dugmeKomponenta = <Dugme btnType='Rezultat'clicked={this.vidiRezultat}>Vidi Rezultat</Dugme>
        
     }
-    console.log('iz rendera ' + this.state.rezultat)
+    
     return (
       <div> 
       {pitanjeKomponenta}

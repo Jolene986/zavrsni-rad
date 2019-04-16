@@ -10,9 +10,12 @@ export default class Pocetna extends Component {
             setujTip = {this.props.stejtSetTip}
             oblast = {item}
             id = {item}
-            key = {item}/>
+            key = {item}
+            setNovaPitanja = {this.props.setujPitanja}
+            novapitanja={this.props.pitanija}/>
         
       })
+     
       
     return (
       <div>
