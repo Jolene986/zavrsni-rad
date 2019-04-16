@@ -47,9 +47,10 @@ class App extends Component {
       
        <Layout>
         <Switch>
-        <Route path="/kviz" render={(props) =>  <Quiz  {...props} pitanija = {this.state.pitanja}/>  }/>
+        <Route path="/kviz" render={(props) =>  <Quiz  {...props} pitanija = {this.state.pitanja}
+         setujRezultat={this.setBodovi} cimanje = {this.state.tezak}/>  }/>
          <Route path="/odgovori" component={TacniOdg } />
-         <Route path="/rang-lista" component={RangLista } />
+         <Route path="/rang-lista" render = {(props)=> <RangLista {...props} bodovi={this.state.bodovi} /> } />
          <Route path="/" render={(props) => <Pocetna {...props} teskost = {this.setTezina}
          stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTipKviza} 
          setujPitanja={this.setPitanja} pitanija={this.state.pitanja}/>} />

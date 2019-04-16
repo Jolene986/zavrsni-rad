@@ -10,3 +10,5 @@ const odabranaPitanja = this.state.pitanja.filter(pitanje => {
     return pitanje.tipKviza === 'zivotinje'
 }
 )
+
+//<modal modalClosed = {this.neIdemNaRezultate} />

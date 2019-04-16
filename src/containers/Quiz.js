@@ -46,25 +46,36 @@ export default class Quiz extends Component {
         }
       }
     }
-     proveraTacnostiMetod = (vrednost)=> {
-        //let datOdgovor = vrednost;
-        console.log('vrednost koju prima provera tacnosti metod' + vrednost)
+     setDatOdgovor = (vrednost)=> {
+          
        this.setState({datOdgovor : vrednost})
-      // console.log('iz provera tacnosti metod' +this.state.datOdgovor);
+      
       
       }
 
      vidiRezultat=()=> {
          this.provera();
          this.setState({finished:true})
+         this.props.setujRezultat(this.state.rezultat);
        }
-    neIdemNaRezultate = () => {
-       // ovde ce da ide ruter za pocetnu
-       this.setState({finished : false})
+    setTajm = () => {
+      let start =setTimeout(this.nextDugmeHandler,10000);
+      let start2;
+      if (this.state.poslednjePitanje) {
+        clearTimeout(start);
+         start2 =setTimeout(this.vidiRezultat,10000);
+      }
+      if(this.state.finished) {
+        clearTimeout(start2);
+      }
     }
 
        
   render() {
+    if (this.props.cimanje) {
+      this.setTajm();
+    }
+    console.log('render')
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
    
@@ -73,7 +84,7 @@ export default class Quiz extends Component {
                                   pitanje = {trenPitanje} 
                                   ponudjeniOdg = {trenPitanje.ponudjeniOdg}
                                   tipPitanja = {trenPitanje.tip} 
-                                  proveraTacnosti = {this.proveraTacnostiMetod}/>
+                                  proveraTacnosti = {this.setDatOdgovor}/>
                                    }
     let dugmeKomponenta = <Dugme btnType='Next' clicked = {this.nextDugmeHandler}>Sledece Pitanje</Dugme>
     if (this.state.poslednjePitanje) {
@@ -81,12 +92,14 @@ export default class Quiz extends Component {
        
     }
     
+    
+    
     return (
       <div> 
       {pitanjeKomponenta}
       {dugmeKomponenta}
       <Dugme btnType='Hint'>HINT</Dugme>
-      <Modal show={this.state.finished} modalClosed = {this.neIdemNaRezultate}><Rezultat bodovi = {this.state.rezultat}/></Modal>
+      <Modal show={this.state.finished} ><Rezultat bodovi = {this.state.rezultat}/></Modal>
       </div>
     )
   }

@@ -9,7 +9,11 @@ import PodgovorSlike from '../ponudjeniOdgovor/PodgovorSlike'
   { return  <PodgovorSlike odgovor={item} key={i} id={i} provera={props.provera}/>} )
 
   return (
-    <Pomocna>{odgovor}</Pomocna>
+    <Pomocna>
+      <div id="slike">
+    {odgovor}
+    </div>
+    </Pomocna>
   )
 }
 export default ponudjeniOdgSlike;
