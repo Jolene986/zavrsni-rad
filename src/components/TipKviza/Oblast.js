@@ -18,8 +18,8 @@ export default class Oblast extends Component {
     odustani =()=> {
         this.setState({pokaziOpciju : false})
     }
-    prikazStanja = ()=>{
-        console.log('klik radi' + +this.props.stejtTezina)
+    zapocniKviz = ()=>{
+        console.log('zapocni kviz' )
     }
   render() {
       
@@ -27,7 +27,7 @@ export default class Oblast extends Component {
         <Pomocna>
         <Modal show={this.state.pokaziOpciju} modalClosed = {this.odustani}><Tezina setTezina = {this.props.tezina}/>
         <Nadimak setujNadimak = {this.props.snadimak} />
-        <button onClick = {this.prikazStanja}>Zapocni kviz</button>
+        <button onClick={this.zapocniKviz} >Zapocni kviz</button>
         </Modal>
          <div id = {this.props.id} onClick= {this.pokaziOpciju}>{this.props.oblast}</div>
         </Pomocna>

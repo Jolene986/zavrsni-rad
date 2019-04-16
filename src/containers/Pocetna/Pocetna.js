@@ -3,7 +3,7 @@ import Oblast from '../../components/TipKviza/Oblast';
 
 export default class Pocetna extends Component {
   render() {
-      const oblasti = ['Zivotinje', 'Biljke', 'Ekologija'].map(item => {
+      const oblasti = ['zivotinje', 'biljke', 'ekologija'].map(item => {
           return <Oblast tezina = {this.props.teskost}
           stejtTezina = {this.props.sttezina}
            snadimak = {this.props.stejtsetNadimak}

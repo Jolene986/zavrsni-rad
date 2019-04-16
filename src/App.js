@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Layout from './components/Layout';
-//import Quiz from './containers/Quiz';
+import Quiz from './containers/Quiz';
 import Pocetna from './containers/Pocetna/Pocetna'
 
 class App extends Component {
@@ -36,12 +36,11 @@ class App extends Component {
     return (
       <div className="App">
       
-      <button onClick = {this.pokaziNadimak}>nadimak</button>
        <Layout>
          <Pocetna teskost = {this.setTezina}
-          sttezina = {this.state.tezak} 
-          stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTipKviza}/>
+         stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTipKviza}/>
           </Layout>
+          <Quiz/>
       </div>
     );
   }

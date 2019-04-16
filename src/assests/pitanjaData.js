@@ -12,7 +12,8 @@ let pitanja = [
         ],
         hint: "Neki hint",
         tacanOdg : "prolece",
-        vrednost: 5
+        vrednost: 5,
+        tipKviza: 'zivotinje'
     },
     {
         id: 5,
@@ -25,7 +26,8 @@ let pitanja = [
             "4"
         ],
         tacanOdg : "slika1",
-        vrednost: 10
+        vrednost: 10,
+        tipKviza: 'biljke'
     },
     {
         id: 2,
@@ -39,7 +41,8 @@ let pitanja = [
         ],
         hint: "Neki hint",
         tacanOdg : "kupus",
-        vrednost: 5
+        vrednost: 5,
+        tipKviza: 'biljke'
     },
     {
         id: 3,
@@ -48,7 +51,8 @@ let pitanja = [
         ponudjeniOdg: [],
         hint: "Neki hint",
         tacanOdg : "zec",
-        vrednost: 20
+        vrednost: 20,
+        tipKviza: 'zivotinje'
     },
     {
         id: 4,
@@ -61,7 +65,8 @@ let pitanja = [
             "4"
         ],
         tacanOdg : "slika1",
-        vrednost: 10
+        vrednost: 10,
+        tipKviza: 'zivotinje'
     }
     
     ]
