@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import {withRouter} from 'react-router-dom';
 import Pomocna from '../../hoc/Pomocna'
 
  const rezultat =(props)=> {
   return (
     <Pomocna>
-        <h3>Vas razultat je</h3>
+        <h3>NADIMAK Vas razultat je</h3>
         <h1 style = {{color:'red'}}>{props.bodovi}</h1>
-        <p>Vidi tacne odgovore</p>
-        <p>Vidi rezultate</p>
+        <p onClick = {()=>props.history.push('/odgovori')}>Vidi tacne odgovore</p>
+        <p onClick = {()=>props.history.push('/rang-lista')}>Vidi Rang listu</p>
     </Pomocna>
   )
 }
-export default rezultat
+export default withRouter(rezultat);

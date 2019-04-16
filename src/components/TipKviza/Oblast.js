@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom';
+
 import Modal from '../UI/Modal/Modal';
 import Pomocna from '../../hoc/Pomocna';
 import Tezina from './Tezina';
 import Nadimak from './Nadimak';
 
 
-export default class Oblast extends Component {
+ class Oblast extends Component {
     state = {
         pokaziOpciju : false,
         
@@ -20,6 +22,7 @@ export default class Oblast extends Component {
     }
     zapocniKviz = ()=>{
         console.log('zapocni kviz' )
+        this.props.history.push('/kviz')
     }
   render() {
       
@@ -35,3 +38,5 @@ export default class Oblast extends Component {
     )
   }
 }
+
+export default  withRouter(Oblast);

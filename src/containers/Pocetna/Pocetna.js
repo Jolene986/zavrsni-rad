@@ -13,12 +13,15 @@ export default class Pocetna extends Component {
             key = {item}/>
         
       })
+      
     return (
       <div>
         <div>Uputstva</div>
         <h1>BIOLOŠKI KVIZ</h1>
         <h4>Izaberi oblast</h4>
         {oblasti}
+
+        <button onClick = {()=>this.props.history.push('/kviz')}>Probni ruter buton</button>
       </div>
     )
   }

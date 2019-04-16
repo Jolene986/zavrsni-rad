@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import {Route, Switch} from 'react-router-dom';
 
 import './App.css';
 import Layout from './components/Layout';
 import Quiz from './containers/Quiz';
-import Pocetna from './containers/Pocetna/Pocetna'
+import Pocetna from './containers/Pocetna/Pocetna';
+import TacniOdg from './components/Rezultat/TacniOdg';
+import RangLista from './containers/Rezultati/RangLista';
 
 class App extends Component {
   state = {
@@ -37,10 +40,16 @@ class App extends Component {
       <div className="App">
       
        <Layout>
-         <Pocetna teskost = {this.setTezina}
-         stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTipKviza}/>
+        <Switch>
+         <Route path="/kviz" component={Quiz} />
+         <Route path="/odgovori" component={TacniOdg } />
+         <Route path="/rang-lista" component={RangLista } />
+         <Route path="/" render={(props) => <Pocetna {...props} teskost = {this.setTezina}
+         stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTipKviza}/>} />
+        </Switch>
+        
           </Layout>
-          <Quiz/>
+          
       </div>
     );
   }
