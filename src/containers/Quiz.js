@@ -99,7 +99,7 @@ export default class Quiz extends Component {
       {pitanjeKomponenta}
       {dugmeKomponenta}
       <Dugme btnType='Hint'>HINT</Dugme>
-      <Modal show={this.state.finished} ><Rezultat bodovi = {this.state.rezultat}/></Modal>
+      <Modal show={this.state.finished} ><Rezultat bodovi = {this.state.rezultat} nadimak = {this.props.ime}/></Modal>
       </div>
     )
   }

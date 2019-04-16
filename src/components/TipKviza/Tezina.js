@@ -10,13 +10,13 @@ this.props.setTezina(event.target.value);
       <div  onChange ={this.onChangeHandler} >
         <label>
         <input type="radio" value = 'Da' 
-        name = "tezina"  onChange ={this.onChangeHandler}
+        name = "tezina"  
         />
         Cimanje
       </label>
       <label>
         <input type="radio" value = 'Ne' 
-        name = "tezina" 
+        name = "tezina" defaultChecked
         />
         Laganica
       </label>

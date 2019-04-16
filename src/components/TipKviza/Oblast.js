@@ -31,7 +31,7 @@ import Nadimak from './Nadimak';
         
         
         this.props.setNovaPitanja(odabranaPitanja);
-        console.log('zapocni kviz' )
+        
         
         this.props.history.replace('/kviz')
     }

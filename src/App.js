@@ -12,7 +12,7 @@ import RangLista from './containers/Rezultati/RangLista';
 class App extends Component {
   state = {
     
-    nadimak: '',
+    nadimak: '' || 'Korisnice',
     tezak : false,
     pitanja: pitanja,
     bodovi: 0
@@ -48,7 +48,8 @@ class App extends Component {
        <Layout>
         <Switch>
         <Route path="/kviz" render={(props) =>  <Quiz  {...props} pitanija = {this.state.pitanja}
-         setujRezultat={this.setBodovi} cimanje = {this.state.tezak}/>  }/>
+         setujRezultat={this.setBodovi} cimanje = {this.state.tezak}
+         ime={this.state.nadimak}/>  }/>
          <Route path="/odgovori" component={TacniOdg } />
          <Route path="/rang-lista" render = {(props)=> <RangLista {...props} bodovi={this.state.bodovi} /> } />
          <Route path="/" render={(props) => <Pocetna {...props} teskost = {this.setTezina}

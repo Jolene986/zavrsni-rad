@@ -7,7 +7,7 @@ export default class Nadimak extends Component {
     }
   render() {
     return (
-      <input type="text" onChange={this.onchangeHandler} />
+      <input type="text" onChange={this.onchangeHandler} required/>
     )
   }
 }

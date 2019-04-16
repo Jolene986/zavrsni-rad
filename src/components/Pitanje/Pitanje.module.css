@@ -1,0 +1,17 @@
+.Div {
+    border: 5px solid transparent;
+    border-radius:5px;
+    width: 80%;
+    margin: 20 auto;
+    padding: 5px;
+}
+.success {
+    border-color: green;
+}
+
+.warning {
+    border-color: yellow; 
+}
+.danger {
+    border-color: red;
+}
