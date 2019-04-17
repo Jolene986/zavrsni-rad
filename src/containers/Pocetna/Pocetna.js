@@ -1,7 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 import Oblast from '../../components/TipKviza/Oblast';
+import Uputstvo from '../../components/Uputstvo/Uputstvo';
+ import UputstvoToggle from '../../components/Uputstvo/UputstvoToggle';
 
 export default class Pocetna extends Component {
+  state = {
+    uputstvoShow: false
+  }
+  uputstvoOpenHandler =()=>{
+    this.setState({uputstvoShow:true})
+}
+
+  uputstvoClosedHandler =()=>{
+      this.setState({uputstvoShow:false})
+  }
+
   render() {
       const oblasti = ['zivotinje', 'biljke', 'ekologija'].map(item => {
           return <Oblast tezina = {this.props.teskost}
@@ -19,12 +33,11 @@ export default class Pocetna extends Component {
       
     return (
       <div>
-        <div>Uputstva</div>
+        <UputstvoToggle clicked = {this.uputstvoOpenHandler}/>
+        <Uputstvo open={this.state.uputstvoShow} closed = {this.uputstvoClosedHandler} />
         <h1>BIOLOŠKI KVIZ</h1>
         <h4>Izaberi oblast</h4>
         {oblasti}
-
-        <button onClick = {()=>this.props.history.push('/kviz')}>Probni ruter buton</button>
       </div>
     )
   }

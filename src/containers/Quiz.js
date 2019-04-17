@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Pitanje from '../components/Pitanje/Pitanje';
-import Dugme from '../components/dugmad/dugme'
+import Dugme from '../components/UI/dugmad/dugme'
 import Modal from '../components/UI/Modal/Modal'
 import Rezultat from '../components/Rezultat/Rezultat'
 
@@ -59,22 +59,22 @@ export default class Quiz extends Component {
          this.props.setujRezultat(this.state.rezultat);
        }
     setTajm = () => {
-      let start =setTimeout(this.nextDugmeHandler,10000);
-      let start2;
+      let start =setInterval(this.nextDugmeHandler,10000);
+     
       if (this.state.poslednjePitanje) {
-        clearTimeout(start);
-         start2 =setTimeout(this.vidiRezultat,10000);
-      }
-      if(this.state.finished) {
-        clearTimeout(start2);
-      }
+         clearInterval(start);
+         this.vidiRezultat();
+       }
+      
+      
     }
 
        
   render() {
-    if (this.props.cimanje) {
-      this.setTajm();
-    }
+    //if (this.props.cimanje) {
+      //this.setTajm();
+    // }
+    
     console.log('render')
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];

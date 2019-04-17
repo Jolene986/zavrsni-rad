@@ -41,7 +41,7 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.setPitanja);
+   
     return (
       <div className="App">
       

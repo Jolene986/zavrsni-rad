@@ -12,13 +12,16 @@ export default class PodgovorCheckbox extends Component {
   
   render() {
     return (
-      <label>
-        <input type="radio" value = {this.props.odgovor} 
+      <div>
+         <input type="radio" value = {this.props.odgovor} 
         onChange ={this.onChangeHendler} 
         name = "cekovi"
         />
-        {this.props.odgovor}
+        <label>
+       {this.props.odgovor}
       </label>
+      </div>
+      
     )
   }
 }

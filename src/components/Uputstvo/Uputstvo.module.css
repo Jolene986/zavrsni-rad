@@ -1,0 +1,26 @@
+.Uputstvo {
+    position: fixed;
+    width: 380px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Closed {
+    transform: translateX(-100%);
+}
+.Logo {
+    height: 11%;
+    margin-bottom: 32px;
+}
+
