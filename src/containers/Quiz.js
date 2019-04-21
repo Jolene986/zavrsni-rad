@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import Pitanje from '../components/Pitanje/Pitanje';
 import Dugme from '../components/UI/dugmad/dugme'
 import Modal from '../components/UI/Modal/Modal'
-import Rezultat from '../components/Rezultat/Rezultat'
+import Rezultat from '../components/Rezultat/Rezultat';
+
 
 
 export default class Quiz extends Component {
@@ -54,25 +55,34 @@ export default class Quiz extends Component {
       }
 
      vidiRezultat=()=> {
+       console.log('vidi rezultat metod opalioo')
          this.provera();
          this.setState({finished:true})
          this.props.setujRezultat(this.state.rezultat);
        }
     setTajm = () => {
-      let start =setInterval(this.nextDugmeHandler,10000);
+      let start = setInterval(this.nextDugmeHandler,5000);
      
       if (this.state.poslednjePitanje) {
+        console.log('iz tajmauta state poslednje pitanje je skontao')
          clearInterval(start);
          this.vidiRezultat();
        }
-      
-      
     }
-
+    componentDidMount(){
+      //this.setTajm();
+    }
+    
+    /*shouldComponentUpdate(nextProps, nextState){
+      if (this.state.poslednjePitanje) {
+        return true
+      }
+      return nextState.trenPitanje !== this.state.trenPitanje;
+    }*/
        
   render() {
     //if (this.props.cimanje) {
-      //this.setTajm();
+     //this.setTajm();
     // }
     
     console.log('render')

@@ -3,6 +3,7 @@ import React from 'react'
 import PonudjeniOdgCheckbox from './ponudjeniOdgOpcije/ponudjeniOdgCheckbox';
 import PonudjeniOdgInput from './ponudjeniOdgOpcije/ponudjeniOdgInput';
 import PonudjeniOdgSlike from './ponudjeniOdgOpcije/ponudjeniOdgSlike';
+import PonudjenOdgDnD from './ponudjeniOdgOpcije/ponudjeniOdgDnD';
 import Pomocna from '../../hoc/Pomocna'
 
 const ponudjeniOdgovoriSwic =(props)=> {
@@ -18,7 +19,7 @@ const ponudjeniOdgovoriSwic =(props)=> {
         ponudjenOdg = <PonudjeniOdgSlike odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         case ('info'):
-        ponudjenOdg = 'DND komponenta'
+        ponudjenOdg = <PonudjenOdgDnD odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         default: ponudjenOdg = null;
     }

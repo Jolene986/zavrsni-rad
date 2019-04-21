@@ -17,7 +17,7 @@ export default class Pocetna extends Component {
   }
 
   render() {
-      const oblasti = ['zivotinje', 'biljke', 'ekologija'].map(item => {
+      const oblasti = ['zivotinje', 'biljke', 'genetika'].map(item => {
           return <Oblast tezina = {this.props.teskost}
           stejtTezina = {this.props.sttezina}
            snadimak = {this.props.stejtsetNadimak}

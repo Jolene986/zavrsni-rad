@@ -67,7 +67,34 @@ let pitanja = [
         tacanOdg : "slika1",
         vrednost: 10,
         tipKviza: 'zivotinje'
-    }
-    
+    },
+    {id: 8,
+        tip:"info",
+        pitanje: "Poređaj faze Mitoze  prema redosledu dešavanja",
+        ponudjeniOdg: [
+            "Citokinezis",
+            "Metafaza",
+            "Telofaza",
+            "Profaza",
+            "Anafaza"
+        ],
+        tacanOdg : "Profaza,Metafaza,Anafaza,Telofaza,Citokinezis",
+        vrednost: 300,
+        tipKviza: 'genetika' 
+    },
+    {
+        id: 14,
+        tip:"info",
+        pitanje: "Izbaci uljeza2!",
+        ponudjeniOdg: [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        tacanOdg : "slika1",
+        vrednost: 10,
+        tipKviza: 'biljke'
+    },
     ]
     export default pitanja

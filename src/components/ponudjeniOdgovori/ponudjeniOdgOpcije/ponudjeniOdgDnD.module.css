@@ -1,0 +1,15 @@
+.Li {
+    width: 260px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.Li:hower {
+    cursor: pointer;
+}
+.Ul {
+    padding: 40px;
+    list-style: none;
+    width: 50%;
+    margin: 0 auto;
+}
