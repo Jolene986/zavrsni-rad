@@ -10,7 +10,7 @@ let pitanja = [
             "jesen",
             "zima"
         ],
-        hint: "Neki hint",
+        hint: "Neki hin4t",
         tacanOdg : "prolece",
         vrednost: 5,
         tipKviza: 'biljke'
@@ -25,6 +25,7 @@ let pitanja = [
             "3",
             "4"
         ],
+        hint: "Neki hint6",
         tacanOdg : "slika1",
         vrednost: 10,
         tipKviza: 'biljke'
@@ -39,7 +40,7 @@ let pitanja = [
             "paprika",
             "krompir"
         ],
-        hint: "Neki hint",
+        hint: "Neki hint4",
         tacanOdg : "kupus",
         vrednost: 5,
         tipKviza: 'biljke'
@@ -64,6 +65,7 @@ let pitanja = [
             "3",
             "4"
         ],
+        hint: "Neki hint1",
         tacanOdg : "slika1",
         vrednost: 10,
         tipKviza: 'zivotinje'
@@ -78,6 +80,7 @@ let pitanja = [
             "Profaza",
             "Anafaza"
         ],
+        hint: "Neki hint",
         tacanOdg : "Profaza,Metafaza,Anafaza,Telofaza,Citokinezis",
         vrednost: 300,
         tipKviza: 'genetika' 
@@ -92,9 +95,25 @@ let pitanja = [
             "3",
             "4"
         ],
+        hint: "Neki hint",
         tacanOdg : "slika1",
         vrednost: 10,
         tipKviza: 'biljke'
+    },
+    {
+        id: 12,
+        tip:"success",
+        pitanje: "Tvoje omiljeno jelo",
+        ponudjeniOdg: [
+            "kupus",
+            "patlidzan",
+            "paprika",
+            "krompir"
+        ],
+        hint: "Neki hint4",
+        tacanOdg : "kupus",
+        vrednost: 5,
+        tipKviza: 'genetika'
     },
     ]
     export default pitanja

@@ -1,0 +1,18 @@
+.Quiz {
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: center;
+}
+.zivotinje {
+    border-color: magenta;
+    background-image: url("../../assests/images/slike/zivotinje.png");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.biljke {
+    border-color: aquamarine;
+}

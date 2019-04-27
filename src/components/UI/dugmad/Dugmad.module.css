@@ -4,6 +4,11 @@
     background-color: white;
     border-radius: 5px;
 }
+.Dugme:disabled {
+    background-color: gray;
+    color: black;
+    border-color: gray;
+}
 .Next {
     color: green;
     border-color: green;

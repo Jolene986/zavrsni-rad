@@ -1,9 +1,12 @@
 .Div {
     border: 5px solid transparent;
     border-radius:5px;
-    width: 80%;
-    margin: 20 auto;
+    width: 50%;
+    height: 450px;
+    margin: 0 auto;
+    margin-top:20px;
     padding: 5px;
+    background-color: antiquewhite;
 }
 .success {
     border-color: green;

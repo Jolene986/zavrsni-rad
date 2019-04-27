@@ -16,7 +16,7 @@ import Nadimak from './Nadimak';
     pokaziOpciju=(event)=> {
         
         this.setState({pokaziOpciju : true});
-       // this.props.setujTip(event.target.id)
+       
        this.setState({tip : event.target.id});
        
     }
@@ -30,7 +30,7 @@ import Nadimak from './Nadimak';
         )
         
         
-        this.props.setNovaPitanja(odabranaPitanja);
+        this.props.setNovaPitanja(odabranaPitanja,this.state.tip);
         
         
         this.props.history.replace('/kviz')
@@ -41,7 +41,7 @@ import Nadimak from './Nadimak';
         <Pomocna>
         <Modal show={this.state.pokaziOpciju} modalClosed = {this.odustani}><Tezina setTezina = {this.props.tezina}/>
         <Nadimak setujNadimak = {this.props.snadimak} />
-        <button onClick={this.zapocniKviz} id="lalal" >Zapocni kviz</button>
+        <button onClick={this.zapocniKviz}  >Zapocni kviz</button>
         </Modal>
          <div id = {this.props.id} onClick= {this.pokaziOpciju}>{this.props.oblast}</div>
         </Pomocna>

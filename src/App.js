@@ -4,7 +4,7 @@ import pitanja from './assests/pitanjaData';
 
 import './App.css';
 import Layout from './components/Layout';
-import Quiz from './containers/Quiz';
+import Quiz from './containers/Quiz/Quiz';
 import Pocetna from './containers/Pocetna/Pocetna';
 import TacniOdg from './components/Rezultat/TacniOdg';
 import RangLista from './containers/Rezultati/RangLista';
@@ -15,6 +15,7 @@ class App extends Component {
     nadimak: '' || 'Korisnice',
     tezak : false,
     pitanja: pitanja,
+    tip:'',
     bodovi: 0
   }
   
@@ -30,13 +31,13 @@ class App extends Component {
     }
     
   }
-  setPitanja = (value)=> {
+  setPitanja = (value,tip)=> {
     
     const novaPitanja = value;
-  this.setState({pitanja:novaPitanja})
+  this.setState({pitanja:novaPitanja, tip:tip})
 }
 
-  setBodovi = (value)=> {
+  setBodovi = (value,)=> {
     this.setState({bodovi:value})
   }
   
@@ -48,7 +49,7 @@ class App extends Component {
        <Layout>
         <Switch>
         <Route path="/kviz" render={(props) =>  <Quiz  {...props} pitanija = {this.state.pitanja}
-         setujRezultat={this.setBodovi} cimanje = {this.state.tezak}
+         setujRezultat={this.setBodovi} cimanje = {this.state.tezak} tipQ ={this.state.tip}
          ime={this.state.nadimak}/>  }/>
          <Route path="/odgovori" component={TacniOdg } />
          <Route path="/rang-lista" render = {(props)=> <RangLista {...props} bodovi={this.state.bodovi} /> } />

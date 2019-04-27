@@ -1,0 +1,14 @@
+.Hint {
+    position: absolute;
+    
+    background-color: white;
+    width: 13%;
+    border: 2px solid greenyellow;
+    box-shadow: 1px 1px 1px gray;
+    padding: 6px;
+    left:82%;
+    top:11%;
+    box-sizing: border-box;
+    height: 10em;
+    transition: all 0.3s ease-out;
+}
