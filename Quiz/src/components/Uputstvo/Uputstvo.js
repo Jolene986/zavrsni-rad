@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Uputstvo.module.css';
 import Pozadina from '../UI/PozadinaModal/PozadinaModal';
 import Pomocna from '../../hoc/Pomocna';
-import Logo from '../../components/Logo/Logo';
+import Logo from '../Logo/Logo';
 
 const uputstvo = (props)=>{
   let klase = [classes.Uputstvo, classes.Closed];
