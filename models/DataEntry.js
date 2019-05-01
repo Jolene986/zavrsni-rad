@@ -21,4 +21,6 @@ const DataEntrySchema = new Schema({
         default: Date.now
     }
 });
+
+
 module.exports = DataEntry = mongoose.model( 'dataEntry', DataEntrySchema);

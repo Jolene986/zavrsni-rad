@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+urlencodedParser = bodyParser.urlencoded({extended : false});
+
 const dataEntries = require('./routes/api/dataEntries')
 
 const app = express();

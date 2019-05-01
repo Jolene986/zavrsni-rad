@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 import Pomocna from '../../hoc/Pomocna'
 
  const rezultat =(props)=> {
@@ -10,6 +10,7 @@ import Pomocna from '../../hoc/Pomocna'
         <h1 style = {{color:'red'}}>{props.bodovi}</h1>
         <p onClick = {()=>props.history.push('/odgovori')}>Vidi tacne odgovore</p>
         <p onClick = {()=>props.history.push('/rang-lista')}>Vidi Rang listu</p>
+        <Link to = '/'>Vrati se na pocetak</Link>
     </Pomocna>
   )
 }

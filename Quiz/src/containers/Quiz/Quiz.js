@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
+
 
 import Pitanje from '../../components/Pitanje/Pitanje';
 import Dugme from '../../components/UI/dugmad/dugme'
@@ -20,14 +22,17 @@ export default class Quiz extends Component {
         rezultat:0,
         finished: false
       }
-      provera =()=>{
+      provera =(funkc)=>{
         //provera tacnosti i davanje bodova
         let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
         let datOdgovor = this.state.datOdgovor;
         let vrednost = this.state.pitanja[this.state.trenPitanje].vrednost;
-        console.log('tacan odg je:' + tacanOdg + '  dat odgovor je:'+ datOdgovor)
+       
         if (tacanOdg === datOdgovor){ 
-          this.setState(prevState => {return {rezultat: prevState.rezultat + vrednost}})}
+          this.setState(prevState => {return {rezultat: prevState.rezultat + vrednost}},funkc)
+        }else {
+          this.setState(prevState => {return {rezultat: prevState.rezultat + 0}},funkc)
+        }
           
       
     }
@@ -67,19 +72,44 @@ export default class Quiz extends Component {
           isDisabled : true}})
       }
       hintstateToggler =()=>{
-        this.setState( (prevState)=> {
-          return {showHint : false,
+        this.setState( 
+         {showHint : false,
             isDisabled : false}
-        }
-          
-          )
+         )
       }
+      posalji=()=> {
+        // u bazu
+        let dataEntry = {
+          name : this.props.ime,
+          score: this.state.rezultat,
+          quizType: this.props.tipQ
+        };
+        axios.post(`/api/dataEntries`, dataEntry, { withCredentials: true } )
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        })
+        .catch(err => console.log(err));
+        // u Local
+        let localRezults =  JSON.parse(localStorage.getItem('rezultJSON')) || [];
+        let result = {...dataEntry, date : new Date().toJSON().slice(0,10).split('-').reverse().join('/')}
+        console.log(localRezults)
+        localRezults.push(result);
+        localStorage.setItem('rezultJSON', JSON.stringify(localRezults))
+        } 
+    
+      
+    
 
+      
+      
      vidiRezultat=()=> {
-       console.log('vidi rezultat metod opalioo')
-         this.provera();
+       
+         this.provera(this.posalji);
          this.setState({finished:true})
-         this.props.setujRezultat(this.state.rezultat);
+         
+          
+        
        }
  
     
@@ -91,9 +121,6 @@ export default class Quiz extends Component {
     }*/
        
   render() {
-    
-    
-    console.log('render')
     let pitanjeKomponenta = 'Pitanje Komponenta';
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
    
@@ -117,7 +144,7 @@ export default class Quiz extends Component {
       {pitanjeKomponenta}
       {dugmeKomponenta}
       <Dugme disable={this.state.isDisabled} btnType='Hint' clicked = {this.hintHandler}>HINT</Dugme>
-      <Hint show = {this.state.showHint}>{trenPitanje.hint}</Hint>
+     {/*<Hint show = {this.state.showHint}>{trenPitanje.hint}</Hint>*/ } 
       <Modal show={this.state.finished} ><Rezultat bodovi = {this.state.rezultat} nadimak = {this.props.ime}/></Modal>
       </div>
     )
