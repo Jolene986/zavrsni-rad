@@ -1,5 +1,8 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
+
 import Tbody from './Tbody';
+import Pomocna from '../../hoc/Pomocna';
 
 const TvojiRezultati =(props)=> {
     let localRezults =  JSON.parse(localStorage.getItem('rezultJSON'));
@@ -11,7 +14,7 @@ const TvojiRezultati =(props)=> {
          score = {item.score}/>
    )
     return(
-       
+       <Pomocna>
     <table >
         
   <thead>
@@ -24,7 +27,8 @@ const TvojiRezultati =(props)=> {
   </thead>
   {tbody}
   </table>
-
+  <Link to ='/'>Vrati se na pocetnu stranu</Link>
+  </Pomocna>
     )
 }
 export default TvojiRezultati

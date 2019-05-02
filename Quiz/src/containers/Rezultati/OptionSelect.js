@@ -7,8 +7,8 @@ export default class OptionSelect extends Component {
     }
   render() {
     return (
-        <select onChange={this.onSelectHandler}>
-        <option disabled  defaultValue> -- Odaberi Oblast -- </option>
+        <select onChange={this.onSelectHandler} defaultValue={'DEFAULT'}>
+        <option value="DEFAULT" disabled> -- Odaberi Oblast -- </option>
         <option value="zivotinje">ZIVOTINJE</option>
         <option value="biljke">BILJKE</option>
         <option value="genetika">GENETIKA</option>

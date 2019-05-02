@@ -1,6 +1,10 @@
 .Hint {
     position: absolute;
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    background-image: url("../../assests/images/slike/hint.jpg");
     background-color: white;
     width: 13%;
     border: 2px solid greenyellow;

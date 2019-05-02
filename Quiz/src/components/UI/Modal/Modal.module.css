@@ -17,3 +17,9 @@
         left: calc(50% - 250px);
     }
 }
+.Rez {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}

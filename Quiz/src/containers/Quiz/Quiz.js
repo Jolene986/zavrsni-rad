@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -113,16 +114,19 @@ export default class Quiz extends Component {
        }
  
     
-    /*shouldComponentUpdate(nextProps, nextState){
-      if (this.state.poslednjePitanje) {
-        return true
-      }
-      return nextState.trenPitanje !== this.state.trenPitanje;
-    }*/
+   
+  componentDidMount(){
+    //this.timer = setTimeout(this.vidiRezultat,20000)
+  }
+  
        
   render() {
+    console.log('render')
     let pitanjeKomponenta = 'Pitanje Komponenta';
+    let hintKomponenta = <Link to ='/'>Nesto nije uredu..vrati se na pocetnu stranu da zapocnes kviz</Link>;
+    let hintDugme = null;
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
+    let dugmeKomponenta = null;
    
     if (this.state.pitanja.length > 0) {
      pitanjeKomponenta = <Pitanje   
@@ -130,12 +134,19 @@ export default class Quiz extends Component {
                                   ponudjeniOdg = {trenPitanje.ponudjeniOdg}
                                   tipPitanja = {trenPitanje.tip} 
                                   proveraTacnosti = {this.setDatOdgovor}/>
-                                   }
-    let dugmeKomponenta = <Dugme btnType='Next' clicked = {this.nextDugmeHandler}>Sledece Pitanje</Dugme>
+      hintKomponenta = <Hint show = {this.state.showHint}>{trenPitanje.hint}</Hint>  
+      hintDugme = <Dugme disable={this.state.isDisabled} btnType='Hint' clicked = {this.hintHandler}>HINT</Dugme>
+       dugmeKomponenta = <Dugme btnType='Next' clicked = {this.nextDugmeHandler}>Sledece Pitanje</Dugme>
+     
     if (this.state.poslednjePitanje) {
        dugmeKomponenta = <Dugme btnType='Rezultat'clicked={this.vidiRezultat}>Vidi Rezultat</Dugme>
        
     }
+                                   }
+      
+    
+    
+     
     
     
     
@@ -143,8 +154,8 @@ export default class Quiz extends Component {
       <div className={[classes.Quiz, classes[this.props.tipQ] ].join(' ')}> 
       {pitanjeKomponenta}
       {dugmeKomponenta}
-      <Dugme disable={this.state.isDisabled} btnType='Hint' clicked = {this.hintHandler}>HINT</Dugme>
-     {/*<Hint show = {this.state.showHint}>{trenPitanje.hint}</Hint>*/ } 
+      {hintDugme}
+     {hintKomponenta}
       <Modal show={this.state.finished} ><Rezultat bodovi = {this.state.rezultat} nadimak = {this.props.ime}/></Modal>
       </div>
     )

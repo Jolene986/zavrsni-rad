@@ -2,17 +2,18 @@
     border: 1px solid transparent;
     width: 100%;
     text-align: center;
+    background-color: #cccccc;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 .zivotinje {
-    border-color: magenta;
-    background-image: url("../../assests/images/slike/zivotinje.png");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    
+    background-image: url("../../assests/images/slike/zivotinje.jpg");
+ 
 }
 .biljke {
-    border-color: aquamarine;
+    background-image: url("../../assests/images/slike/biljke.png");
 }

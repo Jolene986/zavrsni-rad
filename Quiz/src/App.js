@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 import pitanja from './assests/pitanjaData';
-import Layout from './components/Layout';
+import Layout from './hoc/Layout';
 import Quiz from './containers/Quiz/Quiz';
 import Pocetna from './containers/Pocetna/Pocetna';
 import TacniOdg from './components/Rezultat/TacniOdg';

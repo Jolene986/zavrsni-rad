@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import Tbody from './Tbody';
 import OptionSelect from './OptionSelect';
@@ -55,6 +56,8 @@ export default class RangLista extends Component {
   
 </table>
 <p onClick = {()=>this.props.history.push('/tvoji-rezultati')}>Vidi Svoje rezultate</p>
+<Link to ='/tvoji-rezultati'>Vidi Svoje Rezultate</Link>
+<Link to ='/'>Vrati se na pocetnu stranu</Link>
        
       </div>
     )
