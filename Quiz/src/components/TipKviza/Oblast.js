@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
 
 import Modal from '../UI/Modal/Modal';
+import classes from '../UI/Modal/Modal.module.css'
 import Pomocna from '../../hoc/Pomocna';
 import Tezina from './Tezina';
 import Nadimak from './Nadimak';
@@ -39,7 +40,7 @@ import Nadimak from './Nadimak';
       
     return (
         <Pomocna>
-        <Modal show={this.state.pokaziOpciju} modalClosed = {this.odustani}><Tezina setTezina = {this.props.tezina}/>
+        <Modal show={this.state.pokaziOpciju} modalClosed = {this.odustani} className={classes.Modal}><Tezina setTezina = {this.props.tezina}/>
         <Nadimak setujNadimak = {this.props.snadimak} />
         <button onClick={this.zapocniKviz}  >Zapocni kviz</button>
         </Modal>

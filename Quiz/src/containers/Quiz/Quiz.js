@@ -8,7 +8,8 @@ import Dugme from '../../components/UI/dugmad/dugme'
 import Modal from '../../components/UI/Modal/Modal'
 import Rezultat from '../../components/Rezultat/Rezultat';
 import Hint from '../../components/Hint/hint';
-import classes from './Quiz.module.css'
+import classes from './Quiz.module.css';
+import clasa from '../../components/UI/Modal/Modal.module.css';
 
 
 
@@ -156,7 +157,7 @@ export default class Quiz extends Component {
       {dugmeKomponenta}
       {hintDugme}
      {hintKomponenta}
-      <Modal show={this.state.finished} ><Rezultat bodovi = {this.state.rezultat} nadimak = {this.props.ime}/></Modal>
+      <Modal show={this.state.finished} className={[clasa.Modal, clasa.Rez].join(' ')}><Rezultat bodovi = {this.state.rezultat} nadimak = {this.props.ime}/></Modal>
       </div>
     )
   }
