@@ -19,6 +19,10 @@ const DataEntrySchema = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    timed: {
+        type: Boolean,
+        required: true
     }
 });
 

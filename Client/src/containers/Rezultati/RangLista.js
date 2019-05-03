@@ -19,15 +19,17 @@ export default class RangLista extends Component {
         const entries = res.data;
         
         this.setState({ entries : entries});
-        this.filterNsort(this.props.tipQ)
+        this.filterNsort(this.props.tipQ, this.props.timed)
       })
   }
   selectFilter = (value)=>{
-    this.filterNsort(value);
+    this.filterNsort(value,this.props.timed);
   }
-  filterNsort =(value) => {
+  filterNsort =(value,value2) => {
     let entries = [...this.state.entries]
-    let filteredRezults = entries.filter(entrie => entrie.quizType === value).sort((a,b) =>{
+    let filteredRezults = entries.filter(entrie => entrie.quizType === value)
+    .filter(entrie => entrie.timed === value2)
+    .sort((a,b) =>{
       return b.score - a.score;
   })
     this.setState({filteredRezults: filteredRezults})

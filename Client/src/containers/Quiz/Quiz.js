@@ -14,16 +14,22 @@ import clasa from '../../components/UI/Modal/Modal.module.css';
 
 
 export default class Quiz extends Component {
+  
     state = {
-        pitanja: this.props.pitanija,
-        datOdgovor: '', 
-        trenPitanje: 0,
-        poslednjePitanje: false,
-        isDisabled:false,
-        showHint:false,
-        rezultat:0,
-        finished: false
-      }
+      pitanja: this.props.pitanija,
+      datOdgovor: '', 
+      trenPitanje: 0,
+      poslednjePitanje: false,
+      isDisabled:false,
+      showHint:false,
+      rezultat:0,
+      finished: false,
+      width : 100
+    
+  }
+    
+      
+     
       provera =(funkc)=>{
         //provera tacnosti i davanje bodova
         let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
@@ -84,7 +90,8 @@ export default class Quiz extends Component {
         let dataEntry = {
           name : this.props.ime,
           score: this.state.rezultat,
-          quizType: this.props.tipQ
+          quizType: this.props.tipQ,
+          timed : this.props.tClock
         };
         axios.post(`/api/dataEntries`, dataEntry, { withCredentials: true } )
         .then(res => {
@@ -92,10 +99,17 @@ export default class Quiz extends Component {
           console.log(res.data);
         })
         .catch(err => console.log(err));
+
         // u Local
         let localRezults =  JSON.parse(localStorage.getItem('rezultJSON')) || [];
-        let result = {...dataEntry, date : new Date().toJSON().slice(0,10).split('-').reverse().join('/')}
-        console.log(localRezults)
+        if(!(localRezults instanceof Array))
+        localRezults = [localRezults]; 
+
+        let id =localRezults.length.toString();
+        let random = Math.floor(Math.random()*100000).toString();
+         let result = {...dataEntry, date : new Date().toJSON().slice(0,10).split('-').reverse().join('/'),id:+id+random}
+        
+        
         localRezults.push(result);
         localStorage.setItem('rezultJSON', JSON.stringify(localRezults))
         } 
@@ -113,21 +127,47 @@ export default class Quiz extends Component {
           
         
        }
- 
+ startTimers=()=>{
+  this.timer = setTimeout(this.vidiRezultat,20000);
+  this.interval = setInterval( ()=> {
+     if(this.state.width <=0) {clearInterval(this.interval)}
+     
+     this.setState(prevState=>{return {width: prevState.width -5}})
+   console.log(this.state.width);
+  },2000)
+ }
+ stopTimers=()=>{
+  clearInterval(this.interval);
+  clearTimeout(this.timer)
+ }
     
    
   componentDidMount(){
-    //this.timer = setTimeout(this.vidiRezultat,20000)
+    
+    if (this.props.tClock){
+this.startTimers();
+    }
+   
+    
+    
+    
+    
+  }
+  componentWillUnmount(){
+    if (this.props.tClock){
+    this.stopTimers();
+    }
   }
   
        
   render() {
     console.log('render')
-    let pitanjeKomponenta = 'Pitanje Komponenta';
+    let pitanjeKomponenta = null;
     let hintKomponenta = <Link to ='/'>Nesto nije uredu..vrati se na pocetnu stranu da zapocnes kviz</Link>;
     let hintDugme = null;
     const trenPitanje = this.state.pitanja[this.state.trenPitanje];
     let dugmeKomponenta = null;
+    let timeBar = null;
    
     if (this.state.pitanja.length > 0) {
      pitanjeKomponenta = <Pitanje   
@@ -144,6 +184,13 @@ export default class Quiz extends Component {
        
     }
                                    }
+        if(this.props.tClock){
+          let boja = 'green';
+          if(this.state.width <= 80){
+            boja = 'red'
+          }
+          timeBar = <div className={classes.Wrap}><div className={classes.Fill}  style={{backgroundColor: boja, width :`${this.state.width}%`}}>timebar</div></div>
+        }                           
       
     
     
@@ -158,6 +205,7 @@ export default class Quiz extends Component {
       {hintDugme}
      {hintKomponenta}
       <Modal show={this.state.finished} className={[clasa.Modal, clasa.Rez].join(' ')}><Rezultat bodovi = {this.state.rezultat} nadimak = {this.props.ime}/></Modal>
+      {timeBar}
       </div>
     )
   }

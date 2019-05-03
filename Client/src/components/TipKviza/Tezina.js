@@ -13,13 +13,13 @@ this.props.setTezina(event.target.value);
         <input type="radio" value = 'Da' 
         name = "tezina"  className={[classes.optionInput, classes.radio].join(' ')}
         />
-        Cimanje
+        Ograničeno vreme
       </label>
       <label className={classes.Label}>
         <input type="radio" value = 'Ne' 
         name = "tezina" className={[classes.optionInput, classes.radio].join(' ')}
         />
-        Laganica
+        Neograničeno vreme
       </label>
       </div>
     )

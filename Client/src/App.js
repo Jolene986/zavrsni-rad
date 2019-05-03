@@ -17,7 +17,7 @@ class App extends Component {
   state = {
     
     nadimak: '' || 'Korisnice',
-    tezak : false,
+    timed : false,
     pitanja: pitanja,
     filterPitanja:[],
     tip:''
@@ -29,9 +29,9 @@ class App extends Component {
   }
   setTezina = (value)=> {
     if(value === 'Da'){
-      this.setState({tezak:true})
+      this.setState({timed:true})
     }else {
-      this.setState({tezak:false})
+      this.setState({timed:false})
     }
     
   }
@@ -42,9 +42,7 @@ class App extends Component {
 }
 
 
-  /*setBodovi = (value,)=> {
-    this.setState({bodovi:value})
-  }*/
+  
   
   render() {
   
@@ -54,11 +52,11 @@ class App extends Component {
        <Layout>
         <Switch>
         <Route path="/kviz" render={(props) =>  <Quiz  {...props} pitanija = {this.state.filterPitanja}
-          cimanje = {this.state.tezak} tipQ ={this.state.tip}
+          tClock = {this.state.timed} tipQ ={this.state.tip}
          ime={this.state.nadimak}/>  }/>
          <Route path="/odgovori" component={TacniOdg } />
-         <Route path="/tvoji-rezultati" render={(props) =>  <TvojiRezultati  {...props} user={this.state.nadimak}/>} />
-         <Route path="/rang-lista" render={(props) =>  <RangLista  {...props} tipQ={this.state.tip} ime={this.state.nadimak}/>} />
+         <Route path="/tvoji-rezultati" render={(props) =>  <TvojiRezultati  {...props} user={this.state.nadimak} timed={this.state.timed}/>} />
+         <Route path="/rang-lista" render={(props) =>  <RangLista  {...props} tipQ={this.state.tip} ime={this.state.nadimak} timed={this.state.timed}/>} />
          <Route path="/" exact render={(props) => <Pocetna {...props} teskost = {this.setTezina}
          stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTip} 
          setujPitanja={this.setPitanja} pitanija={this.state.pitanja} 

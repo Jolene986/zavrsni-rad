@@ -23,7 +23,9 @@ router.post('/',(req, res)=>{
     const newDataEntry = new DataEntry( { 
         name : req.body.name,
         score : req.body.score,
-        quizType : req.body.quizType});
+        quizType : req.body.quizType,
+        timed: req.body.timed
+    });
    
         
     newDataEntry.save().then(dataEntry => res.json(dataEntry)).catch(err => console.log(err));

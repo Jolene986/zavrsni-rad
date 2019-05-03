@@ -17,3 +17,14 @@
 .biljke {
     background-image: url("../../assests/images/slike/biljke.png");
 }
+.Wrap {
+    height:20px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.Fill {
+    height: 100%;
+    border-radius: inherit;
+    transition: width 0.2s ease-in
+}
