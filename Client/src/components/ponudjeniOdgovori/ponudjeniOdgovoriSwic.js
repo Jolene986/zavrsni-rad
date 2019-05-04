@@ -13,7 +13,7 @@ const ponudjeniOdgovoriSwic =(props)=> {
         ponudjenOdg = <PonudjeniOdgCheckbox odg = {props.ponudjeniOdg} provera = {props.provera}/>
         break; 
         case ('danger'):
-        ponudjenOdg = <PonudjeniOdgInput odg = {props.ponudjeniOdg} provera = {props.provera}/>
+        ponudjenOdg = <PonudjeniOdgInput  provera = {props.provera}/>
         break; 
         case ('warning'):
         ponudjenOdg = <PonudjeniOdgSlike odg = {props.ponudjeniOdg} provera = {props.provera}/>

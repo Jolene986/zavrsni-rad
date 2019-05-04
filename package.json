@@ -1,7 +1,7 @@
 {
   "name": "zavrsni-rad",
   "version": "1.0.0",
-  "description": "zavrsi rad cod akademija",
+  "description": "zavrsi rad Code akademija",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -6,13 +6,20 @@
   
     background-image: url("../../assests/images/slike/hint.jpg");
     background-color: white;
-    width: 13%;
-    border: 2px solid greenyellow;
+    width: 16%;
+    border: 2px solid black;
     box-shadow: 1px 1px 1px gray;
     padding: 6px;
     left:82%;
     top:11%;
     box-sizing: border-box;
-    height: 10em;
+    height: 17em;
     transition: all 0.3s ease-out;
+}
+.Par {
+    position: absolute;
+    top: 180px;
+    width: 70%;
+    left: 25px;
+    padding: 2px;
 }

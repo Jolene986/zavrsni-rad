@@ -1,0 +1,43 @@
+.wraper{
+    font-family: 'Kavoon', cursive;  
+    letter-spacing: 0.2em;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://stmed.net/sites/default/files/styles/1280x720/public/medication-wallpapers-28726-5994001.jpg?itok=iYAXFbaT');
+    color: white;
+    height: 580px;
+    box-sizing: border-box;
+    width: 100%; 
+    
+}
+
+.uputstvo {
+    color: white;
+    position: absolute;
+    height: 40px;
+    width: 130px;
+    top: 2%;
+    left: 5%;
+    /*background-color: pink;*/
+    padding-top: 16px;
+    text-transform: lowercase;
+    font-size: 1.2em;
+    transition: color 20s;
+   
+}
+
+.uputstvo :hover {
+font-size:1.3em;
+cursor: pointer;
+color: orange;
+text-shadow: 2px 2px white;
+}
+
+.naslov {
+  padding-top: 50px;
+  padding-bottom: 50px;
+   font-size:35px; 
+   text-shadow: 4px 4px white;
+   color: orange;
+}
+

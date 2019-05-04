@@ -45,7 +45,7 @@ export default class RangLista extends Component {
       <div>
         <OptionSelect selection = {this.selectFilter}/>
         <table >
-        <caption>{}</caption>
+        <caption>{this.state.filteredRezults[0] ?  this.state.filteredRezults[0].quizType.toUpperCase() : null}</caption>
   <thead>
   
   <tr>
@@ -57,7 +57,7 @@ export default class RangLista extends Component {
   {tbody}
   
 </table>
-<p onClick = {()=>this.props.history.push('/tvoji-rezultati')}>Vidi Svoje rezultate</p>
+
 <Link to ='/tvoji-rezultati'>Vidi Svoje Rezultate</Link>
 <Link to ='/'>Vrati se na pocetnu stranu</Link>
        

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 
 
-export default class PodgovorSlike extends Component {
+export default class PodgovorSlika extends Component {
   onClickHendler = (event)=> {
    document.querySelectorAll('#slike > img').forEach(element =>{
      element.style.border ='5px solid transparent';
@@ -11,9 +11,9 @@ export default class PodgovorSlike extends Component {
     this.props.provera(event.target.alt);
   }
   render() {
-    const slika = require('../../../assests/images/'+ this.props.odgovor+'.jpg')
+    const slika = require('../../../assests/images/imagesQuiz/'+ this.props.odgovor+'.jpg')
     return (
-        <img id = {this.props.id}
+        <img 
          
          src= {slika}
          alt={`slika${this.props.id}`} width = '150' height = '150' style = {{border:'5px solid transparent', borderRadius: 5}}

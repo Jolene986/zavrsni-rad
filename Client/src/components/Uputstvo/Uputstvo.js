@@ -19,10 +19,10 @@ const uputstvo = (props)=>{
           <p>Oblast birate klikom na nju</p>
           <p>Tezina kviza vreme bla bla</p>
           <p>Bodovanje:</p>
-          <p><span style={{ color: 'red' }}>Crvena</span> pitanja nose 20 bodova</p>
-          <p><span style={{ color: 'blue' }}>Plava</span> pitanja nose 15 bodova</p>
-          <p><span style={{ color: 'yellow' }}>Žuta</span> pitanja nose 10 bodova</p>
-          <p><span style={{ color: 'green' }}>Zelena</span> pitanja nose 5 bodova</p>
+          <p><span style={{ color: 'red' }}>Crvena</span> pitanja nose 24 bodova</p>
+          <p><span style={{ color: 'blue' }}>Plava</span> pitanja nose 16 bodova</p>
+          <p><span style={{ color: 'yellow' }}>Žuta</span> pitanja nose 8 bodova</p>
+          <p><span style={{ color: 'green' }}>Zelena</span> pitanja nose 4 bodova</p>
           <p>Maximalan broj bodova je: 100</p>
           <p>Pritiskom na HINT dugme pojavljuje se text koji Vam pomaze u selekciji odgovora! Koristite ga pazljivo jer vam oduzima 25% od vrednosti koje nosi to pitanje</p>
           <p>Ako je neophodno molim Vas unostite latinična slova (ć,č,š,ž,đ) u suprotnom odgovor neće biti priznat kao tačan</p>

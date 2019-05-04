@@ -31,4 +31,5 @@ router.post('/',(req, res)=>{
     newDataEntry.save().then(dataEntry => res.json(dataEntry)).catch(err => console.log(err));
 });
 
+
 module.exports = router;

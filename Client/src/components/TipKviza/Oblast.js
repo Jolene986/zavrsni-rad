@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
 
+
 import Modal from '../UI/Modal/Modal';
 import classes from '../UI/Modal/Modal.module.css'
 import Pomocna from '../../hoc/Pomocna';
 import Tezina from './Tezina';
 import Nadimak from './Nadimak';
-
+import classa from './Oblast.module.css'
 
  class Oblast extends Component {
     state = {
@@ -44,7 +45,7 @@ import Nadimak from './Nadimak';
         <Nadimak setujNadimak = {this.props.snadimak} />
         <button onClick={this.zapocniKviz}  >Zapocni kviz</button>
         </Modal>
-         <div id = {this.props.id} onClick= {this.pokaziOpciju}>{this.props.oblast}</div>
+         <div className={classa.Div} id = {this.props.id} onClick= {this.pokaziOpciju}>{this.props.oblast}</div>
         </Pomocna>
       
     )

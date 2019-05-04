@@ -1,12 +1,12 @@
 import React from 'react'
 import Pomocna from '../../../hoc/Pomocna'
-import PodgovorSlike from '../ponudjeniOdgovor/PodgovorSlike'
+import PodgovorSlika from '../ponudjeniOdgovor/PodgovorSlika'
 
 
  const ponudjeniOdgSlike =(props) =>{
   let ponudjeniOdg = props.odg;
  const odgovor = ponudjeniOdg.map((item, i) =>
-  { return  <PodgovorSlike odgovor={item} key={i} id={i} provera={props.provera}/>} )
+  { return  <PodgovorSlika odgovor={item} key={i} id={i} provera={props.provera}/>} )
 
   return (
     <Pomocna>

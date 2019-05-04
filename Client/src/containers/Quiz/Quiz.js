@@ -35,6 +35,8 @@ export default class Quiz extends Component {
         let tacanOdg = this.state.pitanja[this.state.trenPitanje].tacanOdg;
         let datOdgovor = this.state.datOdgovor;
         let vrednost = this.state.pitanja[this.state.trenPitanje].vrednost;
+        console.log('tacan odg je: ' + tacanOdg)
+        console.log('dat odg '+ datOdgovor )
        
         if (tacanOdg === datOdgovor){ 
           this.setState(prevState => {return {rezultat: prevState.rezultat + vrednost}},funkc)
@@ -128,12 +130,12 @@ export default class Quiz extends Component {
         
        }
  startTimers=()=>{
-  this.timer = setTimeout(this.vidiRezultat,20000);
+ // this.timer = setTimeout(this.vidiRezultat,20000);
   this.interval = setInterval( ()=> {
      if(this.state.width <=0) {clearInterval(this.interval)}
      
      this.setState(prevState=>{return {width: prevState.width -5}})
-   console.log(this.state.width);
+   
   },2000)
  }
  stopTimers=()=>{
@@ -161,7 +163,7 @@ this.startTimers();
   
        
   render() {
-    console.log('render')
+    
     let pitanjeKomponenta = null;
     let hintKomponenta = <Link to ='/'>Nesto nije uredu..vrati se na pocetnu stranu da zapocnes kviz</Link>;
     let hintDugme = null;
@@ -189,7 +191,7 @@ this.startTimers();
           if(this.state.width <= 80){
             boja = 'red'
           }
-          timeBar = <div className={classes.Wrap}><div className={classes.Fill}  style={{backgroundColor: boja, width :`${this.state.width}%`}}>timebar</div></div>
+          timeBar = <div className={classes.Wrap}><div className={classes.Fill}  style={{backgroundColor: boja, height :`${this.state.width}%`}}>timebar</div></div>
         }                           
       
     
