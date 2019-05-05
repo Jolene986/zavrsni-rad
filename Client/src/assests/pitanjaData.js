@@ -170,7 +170,7 @@ let pitanja = [
         pitanje: 'Kako se zove geološka era koja je počela pre oko 65 miliona godina i traje i danas? ',
         tacanOdg : 'kenozoik',
         vrednost: 24,
-        hint: 'Pesma grupe Idoli se zove tako...a refren kaže: "Reci mi ........ nije za tebe, reci mi!"',
+        hint: ' Idoli pevaju: "Reci mi ........ nije za tebe, reci mi!"',
        obj: ' Kenozoik (od grčkih reči kainos = nov + zoe = život) je najmlađa od tri klasične geološke ere. Ona je zapoočela pre 65,5 miliona godina s kredsko-tercijarnim masovnim izumiranjem na kraju krede koje je označilo smrt posljednjih dinosaura na kraju mezozojskeere te traje i danas.'
     },
     {

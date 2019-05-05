@@ -2,8 +2,8 @@
     font-family: 'Kavoon', cursive;  
     letter-spacing: 0.2em;
     background-repeat: no-repeat;
-    background-size: auto;
-    background-image: url('https://stmed.net/sites/default/files/styles/1280x720/public/medication-wallpapers-28726-5994001.jpg?itok=iYAXFbaT');
+    background-size: cover;
+    background-image: url('../../assests/images/slike/front.png');
     color: white;
     height: 580px;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
     width: 130px;
     top: 2%;
     left: 5%;
-    /*background-color: pink;*/
+    
     padding-top: 16px;
     text-transform: lowercase;
     font-size: 1.2em;

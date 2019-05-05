@@ -21,5 +21,32 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../../assests/images/slike/rezultat-modal.png')
+    background-image: url('../../../assests/images/slike/rezultat-modal.png');
+    -webkit-animation-name: zoomIn;
+			-webkit-animation-duration: 0.8s;
+			animation-name: zoomIn;
+			animation-duration: 0.8s
+}
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
