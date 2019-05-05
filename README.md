@@ -1,7 +1,7 @@
-# zavrsni-rad
-# tema:Biološki kviz
+## zavrsni-rad
+### tema:Biološki kviz
 
-Biološki kviz je MERN stack aplikacija čija je svrha da na zanimljii i interaktvni način proveri vaše znanje iz biologije.
+**Biološki kviz** je *MERN stack* aplikacija čija je svrha da na zanimljiv i interaktvni način proveri vaše znanje iz biologije.
 Poseduje dva režima težine lakši - bez vremenskog ograničenja, i teži sa vremenskim ograničenjem za odgovaranje na pitanja.
 Takođe, kviz je podeljen na 3 kategorije u kojima korisnik može da testira svoje znanje: 
 
