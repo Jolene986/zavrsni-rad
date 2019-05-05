@@ -58,7 +58,9 @@ this.setState({localResults : newLocalResults})
 </thead>
 {tbody}
 </table>
- <Link to ='/'>Vrati se na pocetnu stranu</Link>
+
+ <Link to ='/odgovori'>Vidi tačne odgovore</Link>
+<Link to ='/'>Vrati se na pocetnu stranu</Link>
 </Pomocna>
   )
 }

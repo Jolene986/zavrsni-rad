@@ -59,8 +59,8 @@ export default class RangLista extends Component {
 </table>
 
 <Link to ='/tvoji-rezultati'>Vidi Svoje Rezultate</Link>
+<Link to ='/odgovori'>Vidi tačne odgovore</Link>
 <Link to ='/'>Vrati se na pocetnu stranu</Link>
-       
       </div>
     )
   }

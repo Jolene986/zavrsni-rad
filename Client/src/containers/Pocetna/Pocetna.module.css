@@ -1,13 +1,16 @@
 .wraper{
     font-family: 'Kavoon', cursive;  
     letter-spacing: 0.2em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../../assests/images/slike/front.png');
+    
+   
     color: white;
     height: 580px;
-    box-sizing: border-box;
-    width: 100%; 
+    
+    background: url('../../assests/images/slike/front.png') no-repeat center center fixed; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
     
 }
 

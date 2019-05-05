@@ -89,9 +89,12 @@ export default class Quiz extends Component {
       }
       posalji=()=> {
         // u bazu
+
+        let score = this.state.rezultat;
+        if(score<0){score = 0}
         let dataEntry = {
           name : this.props.ime,
-          score: this.state.rezultat,
+          score: score,
           quizType: this.props.tipQ,
           timed : this.props.tClock
         };
@@ -130,13 +133,13 @@ export default class Quiz extends Component {
         
        }
  startTimers=()=>{
- // this.timer = setTimeout(this.vidiRezultat,20000);
+  this.timer = setTimeout(this.vidiRezultat,90000);
   this.interval = setInterval( ()=> {
      if(this.state.width <=0) {clearInterval(this.interval)}
      
-     this.setState(prevState=>{return {width: prevState.width -5}})
+     this.setState(prevState=>{return {width: prevState.width - 5}})
    
-  },2000)
+  },4500)
  }
  stopTimers=()=>{
   clearInterval(this.interval);
@@ -188,10 +191,10 @@ this.startTimers();
                                    }
         if(this.props.tClock){
           let boja = 'green';
-          if(this.state.width <= 80){
+          if(this.state.width <= 20){
             boja = 'red'
           }
-          timeBar = <div className={classes.Wrap}><div className={classes.Fill}  style={{backgroundColor: boja, height :`${this.state.width}%`}}>timebar</div></div>
+          timeBar = <div className={classes.Wrap}><div className={classes.Fill}  style={{backgroundColor: boja, width :`${this.state.width}%`}}>timebar</div></div>
         }                           
       
     

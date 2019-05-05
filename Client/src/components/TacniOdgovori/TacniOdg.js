@@ -10,6 +10,7 @@ export default function TacniOdg(props) {
      <h2>Tačni Odgovori za oblast: {props.tip}</h2>
     {odg}
     <Link to='/rang-lista'>Vidi rang listu</Link>
+    <Link to ='/'>Vrati se na pocetnu stranu</Link>
     </div>
   )
 }
