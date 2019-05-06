@@ -35,6 +35,7 @@ export default class RangLista extends Component {
     this.setState({filteredRezults: filteredRezults})
   }
   render() {
+    console.log(this.state.filteredRezults)
     let tbody = this.state.filteredRezults.map((entries, index) =>
       <Tbody key={entries._id}
        entries={entries} 
