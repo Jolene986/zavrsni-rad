@@ -1,0 +1,9 @@
+.Select {
+  color: hsl(348, 100%, 61%);
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: cursive;
+  border: 2px solid hsl(348, 100%, 61%);
+  outline:none;
+}

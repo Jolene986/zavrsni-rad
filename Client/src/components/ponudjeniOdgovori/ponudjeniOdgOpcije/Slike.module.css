@@ -1,0 +1,10 @@
+.FlexDiv {
+    display: flex;
+    flex-basis: 300px;
+    max-width: 350px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.FlexDiv img:hover {
+    cursor: pointer;
+}

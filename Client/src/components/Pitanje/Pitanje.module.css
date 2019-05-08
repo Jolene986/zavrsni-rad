@@ -1,23 +1,25 @@
 .Div {
-    border: 5px solid transparent;
-    border-radius:5px;
-    width: 50%;
-    height: 450px;
-    margin: 0 auto;
-    margin-top:20px;
-    padding: 5px;
-    background-color: antiquewhite;
+  border: 5px solid transparent;
+  border-radius: 5px;
+  width: 40%;
+  height: 60%;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: mintcream;
+  position: relative;
+  top: 18%;
+  left: 5%;
 }
 .success {
-    border-color: green;
+  border-color: hsl(141, 71%, 48%);
 }
 
 .warning {
-    border-color: yellow; 
+  border-color: hsl(48, 100%, 67%);
 }
 .danger {
-    border-color: red;
+  border-color: hsl(348, 100%, 61%);
 }
 .info {
-    border-color: blue;
+  border-color: hsl(204, 86%, 53%);
 }

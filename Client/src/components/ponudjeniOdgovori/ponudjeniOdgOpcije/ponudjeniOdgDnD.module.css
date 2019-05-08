@@ -3,13 +3,15 @@
     border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 8px;
 }
-.Li:hower {
+.Li:hover {
     cursor: pointer;
 }
 .Ul {
     padding: 40px;
-    list-style: none;
     width: 50%;
     margin: 0 auto;
 }

@@ -1,0 +1,53 @@
+.Wrapper {
+  width: 100%;
+  height: 600px;
+  background: url("../../assests/images/slike/tvojiRezultati.jpg") no-repeat
+    center center fixed;
+ 
+  background-size: cover;
+}
+.Nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 20px;
+  background-color: hsl(204, 86%, 53%);
+  font-family: "Kavoon", cursive;
+  letter-spacing: 0.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.Nav a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.Nav a:hover {
+  color: rgb(250, 255, 0);
+}
+.Table {
+  margin-top: 50px;
+  width: 50%;
+  margin: 0 auto;
+
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.Table th,
+.Table td {
+  border-collapse: collapse;
+  padding: 20px;
+  text-align: center;
+}
+.Table th {
+  background-color: hsl(204, 86%, 53%);
+  color: white;
+}
+.Table tbody > :nth-child(odd) {
+  background: rgba(66, 185, 244, 0.7);
+}
+.Table tbody > :nth-child(even) {
+  background: rgba(250, 255, 0, 0.7);
+  color: white;
+}

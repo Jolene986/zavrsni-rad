@@ -11,15 +11,19 @@
     box-shadow: 1px 1px 1px gray;
     padding: 6px;
     left:82%;
-    top:11%;
+    top:28%;
     box-sizing: border-box;
     height: 17em;
     transition: all 0.3s ease-out;
 }
 .Par {
+    letter-spacing: -0.9px;
+    line-height: 1;
     position: absolute;
-    top: 180px;
-    width: 70%;
+    top: 80%;
+    width: 67%;
     left: 25px;
     padding: 2px;
+    padding-right: 17px;
+    padding-left: 10px;
 }

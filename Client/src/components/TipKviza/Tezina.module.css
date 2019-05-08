@@ -42,7 +42,7 @@
     background: #9faab7;
   }
   .optionInput:checked {
-    background: #40e0d0;
+    background: orange;
   }
   .optionInput:checked::before {
     height: 40px;
@@ -58,7 +58,7 @@
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
-    background: #40e0d0;
+    background: orange;
     content: '';
     display: block;
     position: relative;

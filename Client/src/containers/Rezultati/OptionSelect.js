@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import classes from './OptionSelect.module.css';
 
 export default class OptionSelect extends Component {
 
@@ -7,7 +8,7 @@ export default class OptionSelect extends Component {
     }
   render() {
     return (
-        <select onChange={this.onSelectHandler} defaultValue={'DEFAULT'}>
+        <select className={classes.Select} onChange={this.onSelectHandler} defaultValue={'DEFAULT'}>
         <option value="DEFAULT" disabled> -- Odaberi Oblast -- </option>
         <option value="životinje">ZIVOTINJE</option>
         <option value="biljke">BILJKE</option>

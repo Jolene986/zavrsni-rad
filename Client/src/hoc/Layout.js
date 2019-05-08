@@ -1,14 +1,7 @@
-import React from 'react'
+import React from "react";
 
+const layout = props => {
+  return <main>{props.children}</main>;
+};
 
-
- const layout = (props) => {
-  return (
-   
-    <main>{props.children}</main>
-    
-
-  )
-}
-
-export default layout
+export default layout;

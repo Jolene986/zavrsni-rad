@@ -1,4 +1,28 @@
 .Div:hover {
-   cursor: pointer;
-   color: green;
+  cursor: pointer;
+  color: hsl(141, 71%, 48%);
+}
+.Button {
+  font-family: inherit;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 18px;
+  margin-bottom: 50px;
+  border: 3px solid orange;
+  color: orange;
+  font-size: 16px;
+  font-weight: 600;
+  background: white;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+
+.Button:hover {
+  background-color: white;
+  border: 4px solid hsl(141, 71%, 48%);
+  font-size: 17px;
+  color: hsl(141, 71%, 48%);
+  font-weight: 200;
+  cursor: pointer;
 }

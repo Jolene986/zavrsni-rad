@@ -36,13 +36,13 @@
     margin-right: 0.5rem;
     outline: none;
     position: relative;
-    z-index: 1000;
+    z-index: 500;
   }
   .optionInput:hover {
-    background: pink;
+    background: #fff0db;
   }
   .optionInput:checked {
-    background: magenta;
+    background: orange;
   }
   .optionInput:checked::before {
     height: 40px;
@@ -58,7 +58,7 @@
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.99s;
-    background: magenta;
+    background: orange;
     content: '';
     display: block;
     position: relative;
@@ -73,13 +73,21 @@
   
   
 .Label {
-      color: green;
+      color: black;
     display: block;
     line-height: 40px;
     position: relative;
     top:-7px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid hsl(141, 71%, 48%);
+    border-radius: 10px;
+  }
+  .Label:hover {
+    background-color: #f7d29b;
   }
   .Div {
-      border: 1px solid black;
+    margin: 8px auto;
       width: 50%;
   }
+  
