@@ -1,11 +1,11 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const path = require("path");
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const path = require('path');
 
 urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-const dataEntries = require("./routes/api/dataEntries");
+const dataEntries = require('./routes/api/dataEntries');
 
 const app = express();
 
@@ -13,23 +13,23 @@ const app = express();
 app.use(bodyParser.json());
 
 // connection to mongo db
-const db = require("./config/keys").mongoURI;
+const db = require('./config/keys').mongoURI;
 
 mongoose
-  .connect(db, { useNewUrlParser: true })
-  .then(() => console.log("mongo db connected..."))
+  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('mongo db connected...'))
   .catch(err => console.log(err));
 
 // use routes
-app.use("/api/dataEntries", dataEntries);
+app.use('/api/dataEntries', dataEntries);
 
 // serve static assets if in production
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("Client/build"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('Client/build'));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Client", "build", "index.html"));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'));
   });
 }
 

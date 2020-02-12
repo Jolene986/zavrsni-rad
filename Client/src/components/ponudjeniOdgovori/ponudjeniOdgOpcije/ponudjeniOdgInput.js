@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class ponudjeniOdgInput extends Component {
   onChangeHendler = event => {
@@ -8,13 +8,13 @@ export default class ponudjeniOdgInput extends Component {
     return (
       <input
         spellCheck={false}
-        type="text"
+        type='text'
         onChange={this.onChangeHendler}
         style={{
-          padding: "12px",
-          fontSize: "17px",
-          marginTop: "60px",
-          fontFamily: "inherit"
+          padding: '12px',
+          fontSize: '17px',
+          marginTop: '60px',
+          fontFamily: 'inherit'
         }}
       />
     );
