@@ -7,13 +7,9 @@ export default class Tezina extends Component {
   };
   render() {
     return (
-      <div onChange={this.onChangeHandler}>
+      <div onChange={this.onChangeHandler} className={classes.DivLabel}>
         <label
-          style={{
-            marginRight: "50px",
-            paddingBottom: "10px",
-            paddingTop: "50px"
-          }}
+          
           className={classes.Label}
         >
           <input

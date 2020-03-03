@@ -12,10 +12,13 @@ export default class Nadimak extends Component {
         onChange={this.onchangeHandler}
         placeholder={"Upišite vaš nadimak"}
         style={{
-          padding: "12px",
           fontSize: "17px",
           marginTop: "15px",
-          fontFamily: "inherit"
+          fontFamily: "inherit",
+          padding: "15px 2px",
+    textAlign: "center",
+    border: "2px solid #84ac1f",
+    borderRadius: "13px"
         }}
       />
     );

@@ -76,5 +76,53 @@
       color: green;
     display: block;
     line-height: 40px;
+    font-size:22px;
+     margin-right: 50px;
+    padding-bottom: 10px;
+     
+  }
+  .DivLabel {
+    text-align: left;
+    width: 44%;
+    margin: 0 auto;
+  }
+  .DivLabel:first-child {
+    padding-top: 50px;
   }
   
+  @media only screen and (max-width:768px) {
+    .Label {
+      color: green;
+    display: block;
+    line-height: 29px;
+    font-size:23px;
+ margin-right:0;
+  }
+  .DivLabel {
+    text-align: center; 
+  }
+  .DivLabel:first-child {
+    padding-top: 25px;
+  }
+
+  .optionInput {
+    
+    position: relative;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    transition: all 0.15s ease-out 0s;
+    background: #fcc50d;
+   
+  }
+  .optionInput.radio {
+    top:40px;
+    left:-83px;
+  }
+  
+  }
+
+ 

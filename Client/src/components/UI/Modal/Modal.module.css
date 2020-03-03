@@ -63,3 +63,12 @@
   left: 20%;
   top: 20%;
 }
+
+@media only screen and (max-width:768px){
+ .Home {
+   width:80%;
+   left:10%;
+   height:415px;
+
+ }
+}

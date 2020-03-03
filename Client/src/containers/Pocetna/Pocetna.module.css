@@ -1,44 +1,122 @@
+
+
+
 .wraper {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
   width: 100%;
+  height:100%;
+  padding-bottom:100%;
   font-family: "Kavoon", cursive;
   letter-spacing: 0.2em;
-  height: 800px;
-  color: white;
-  background: url("../../assests/images/slike/front.jpg") no-repeat center
-    center;
-  background-size: cover;
+  background: #70A288;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #315D7B, #70A288);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #315D7B, #70A288); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
+
+
 .uputstvo {
-  color: orange;
+  color: #fcc50d;
   position: absolute;
   height: 40px;
   width: 130px;
   top: 10%;
-  left: 15%;
+  left: 5%;
 
   padding-top: 16px;
   text-transform: lowercase;
-  font-size: 1.3em;
-  transition: color 20s;
+  font-size: 2em;
+  transition: color 0.5s ease-out;
+  text-shadow: #474745 2px 1px 2px;
 }
 
 .uputstvo :hover {
-  font-size: 1.4em;
+  
   cursor: pointer;
-  color: hsl(141, 71%, 48%);
-  text-shadow: 2px 2px white;
+  color: #D91E36;
+  text-shadow: #474745 2px 1px 2px;
 }
 
 .naslov {
-  margin-right: 220px;
+  
   padding-top: 150px;
   padding-bottom: 50px;
   font-size: 35px;
-  text-shadow: 4px 4px white;
-  color: orange;
+ 
+  text-shadow: #474745 2px 1px 2px;
+  color: #D91E36;
 }
 
-.naslov h4 {
-  color: hsl(141, 71%, 48%);
+.oblasti h4 {
+  color:#fcc50d ;
 }
+.oblasti {
+  font-size: 35px;
+  text-shadow: 4px 4px white;
+  text-shadow: #474745 2px 1px 2px;
+  color: #f18867;
+}
+
+
+#zeleniLeptir {
+  position: absolute;
+  top:130px;
+  left:300px;
+  width: 150px;
+  height: auto;
+}
+#zeleniLeptir1 {
+  position: absolute;
+  top:130px;
+  right:300px;
+  width: 150px;
+  height: auto;
+}
+#cvet{
+  display: none;
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width:768px){
+  .uputstvo {
+    color: #fcc50d;
+    padding-top: 1px;
+    text-transform: lowercase;
+    font-size: 1.3em;
+    transition: all 20s;
+    
+    position: static;
+    width:95%;
+    margin: 0 auto;
+    
+
+}
+.naslov {
+  font-size: 25px;
+margin-right:0;
+padding-top: 25px;
+
+
+}
+.oblasti {
+  font-size: 30px;
+}
+.wraper{
+  height: 654px;
+ }
+ #zeleniLeptir,#zeleniLeptir1 {
+  display: none;
+}
+#cvet {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:36%;
+  width: 100px;
+  height: auto;
+}
+  }
