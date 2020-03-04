@@ -1,7 +1,7 @@
 .Div {
-  border: 5px solid transparent;
+  border: 10px solid transparent;
   border-radius: 5px;
-  width: 40%;
+  width: 100%;
   height: 60%;
   margin: 0 auto;
   padding: 5px;
@@ -22,4 +22,20 @@
 }
 .info {
   border-color: hsl(204, 86%, 53%);
+}
+
+@media only screen and (max-width:768px){
+
+
+  .Div {
+    width: 80vw;
+    height: 70vh;
+   
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  .Div h2 {
+    font-size: 18px;
+  }
 }

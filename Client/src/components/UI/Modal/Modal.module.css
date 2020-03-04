@@ -12,12 +12,7 @@
   box-sizing: border-box;
   transition: all 0.3s ease-out;
 }
-@media (min-width: 600px) {
-  .Modal {
-    width: 500px;
-    left: calc(50% - 250px);
-  }
-}
+
 .Rez,
 .Home {
   background-position: center;
@@ -59,9 +54,13 @@
 .Home {
   background-image: url("../../../assests/images/slike/front-modal.jpg");
   width: 60%;
-  
+  height:80%;
   left: 20%;
-  top: 20%;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width:768px){
@@ -69,6 +68,13 @@
    width:80%;
    left:10%;
    height:415px;
-
- }
 }
+.Rez {
+  background-position: 25%;
+}
+}
+@media (min-width: 600px) {
+  .Modal {
+    width: 500px;
+    left: calc(50% - 250px);
+  }}

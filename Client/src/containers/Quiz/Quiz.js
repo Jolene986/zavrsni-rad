@@ -169,7 +169,7 @@ export default class Quiz extends Component {
         />
       );
       hintKomponenta = (
-        <Hint show={this.state.showHint}>{trenPitanje.hint}</Hint>
+        <Hint show={this.state.showHint} clicked={()=>this.setState({showHint:false})}>{trenPitanje.hint}</Hint>
       );
       hintDugme = (
         <Dugme
@@ -211,20 +211,12 @@ export default class Quiz extends Component {
 
     return (
       <div className={[classes.Quiz, classes[this.props.tipQ]].join(" ")}>
+        <div className={classes.Slika}>Slika</div>
+         <div className={classes.PitanjeFlex}>
         {pitanjeKomponenta}
-        <div
-          style={{
-            position: "relative",
-            top: "19%",
-            left: this.props.tipQ === "biljke" ? "0" : "5%"
-          }}
-        >
-          {dugmeKomponenta}
-        </div>
-        <div style={{ position: "absolute", left: "88%", top: "15%" }}>
-          {hintDugme}
-        </div>
-
+         {dugmeKomponenta}
+         </div>
+         {hintDugme}
         {hintKomponenta}
         <Modal
           show={this.state.finished}

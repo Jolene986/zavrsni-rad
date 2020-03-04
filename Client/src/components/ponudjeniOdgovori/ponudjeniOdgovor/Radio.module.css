@@ -42,7 +42,7 @@
     background: #fff0db;
   }
   .optionInput:checked {
-    background: orange;
+    background: hsl(171, 100%, 41%);
   }
   .optionInput:checked::before {
     height: 40px;

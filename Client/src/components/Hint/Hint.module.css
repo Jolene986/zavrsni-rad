@@ -27,3 +27,32 @@
     padding-right: 17px;
     padding-left: 10px;
 }
+.Close{
+    position: apsolute;
+    font-size: 25px;
+    font-weight: bold;
+    color:#D91E36;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:768px){
+
+    .Hint {
+        position: absolute;
+        left:5%;
+        top:11%;
+        width: 85%;
+        border: 2px solid black;
+        box-shadow: 1px 1px 1px gray;
+        padding: 6px;
+        z-index: 500;
+        box-sizing: border-box;
+        height: 80%;
+        transition: all 0.3s ease-out;
+    }
+    .Par {
+        left:13%;
+        font-size: 20px;
+    }
+    
+}

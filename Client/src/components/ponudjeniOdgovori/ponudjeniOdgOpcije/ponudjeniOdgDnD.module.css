@@ -1,3 +1,9 @@
+.Ul {
+    padding: 40px;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .Li {
     width: 260px;
     border: 1px solid black;
@@ -10,8 +16,11 @@
 .Li:hover {
     cursor: pointer;
 }
-.Ul {
-    padding: 40px;
-    width: 50%;
-    margin: 0 auto;
+
+
+@media only screen and (max-width:768px){
+    .Li {
+        width: 100%;
+
+    }
 }

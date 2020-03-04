@@ -1,26 +1,33 @@
 .Quiz {
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     text-align: center;
     background-color: hsl(171, 100%, 41%);
     width: 100%;
-    height: 37.95em;
+    height:100vh;
     
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: cover;
 }
 .životinje {
     
-    background: url("../../assests/images/slike/zivotinje.jpg") no-repeat center center; 
+    background: #22c1c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
  
 }
 .biljke {
-    background: url("../../assests/images/slike/biljke.jpg") no-repeat center center ; 
+    background: #2b7901;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #EBEB1D, #2b7901);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #EBEB1D, #2b7901); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
 }
 .čovek {
-    background: url("../../assests/images/slike/covek.jpg") no-repeat center center;
+    background: #40E0D0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .Wrap {
     position: relative;
@@ -35,4 +42,30 @@
     height: 100%;
     border-radius: inherit;
     transition: width 0.2s ease-in
+}
+.Slika {
+     
+}
+.PitanjeFlex {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (max-width:768px){
+    .Quiz {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Slika {
+        display:none;
+    }
+    .PitanjeFlex {
+        width: 85%;
+        margin-top: 1em;
+    }
 }

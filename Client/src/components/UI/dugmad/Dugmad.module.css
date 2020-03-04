@@ -4,7 +4,9 @@
   background-color: white;
   border-radius: 5px;
   margin-top: 1em;
+  margin-bottom: 1em;
   font-size: 18px;
+  width: 50%;
 }
 .Dugme:disabled {
   background-color: lightgrey;
@@ -21,8 +23,27 @@
 .Hint {
   color: hsl(348, 100%, 61%);
   border-color: hsl(348, 100%, 61%);
+  width: 10%;
 }
 .Rezultat {
   color: hsl(204, 86%, 53%);
   border-color: hsl(204, 86%, 53%);
+}
+
+@media only screen and (max-width:768px){
+  .Hint{
+  width: 40%;
+  position: static;
+  left:0;
+  top:0;
+  margin-bottom: 0.5em;
+  padding: 10px;
+  }
+}
+.Next, .Rezultat{
+
+  padding: 12px;
+  margin-top: 0.5em;
+  width: 50%;
+  margin-bottom: 0.5em;
 }

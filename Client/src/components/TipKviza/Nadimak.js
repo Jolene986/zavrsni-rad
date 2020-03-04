@@ -18,6 +18,7 @@ export default class Nadimak extends Component {
           padding: "15px 2px",
     textAlign: "center",
     border: "2px solid #84ac1f",
+    width:'70%',
     borderRadius: "13px"
         }}
       />

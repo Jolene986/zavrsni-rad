@@ -8,3 +8,15 @@
 .FlexDiv img:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width:768px){
+    .FlexDiv{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(101px, 1fr) );
+    }
+    .Slika {
+        width: 130px;
+        
+    }
+}
+/**/

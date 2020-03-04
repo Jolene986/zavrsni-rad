@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import classes from '../ponudjeniOdgOpcije/Slike.module.css'
 export default class PodgovorSlika extends Component {
   onClickHendler = event => {
     document.querySelectorAll("#slike > img").forEach(element => {
@@ -20,6 +20,7 @@ export default class PodgovorSlika extends Component {
         height="150"
         style={{ border: "5px solid transparent", borderRadius: 5 }}
         onClick={this.onClickHendler}
+        className={classes.Slika}
       />
     );
   }
