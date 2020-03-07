@@ -47,7 +47,7 @@ export default class TvojiRezultati extends Component {
           <Link to="/rang-lista">Rang Lista</Link>
         </div>
 
-        <div style={{ marginTop: "60px" }}>
+        <div className={classes.DivH1}>
           <h1>{this.props.user}</h1>
           <table className={classes.Table}>
             <thead>

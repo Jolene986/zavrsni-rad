@@ -18,7 +18,7 @@ export default function TacniOdg(props) {
           <Link to="/tvoji-rezultati">Tvoji Rezultati</Link>
         </div>
 
-        <h2 style={{ marginTop: "61px" }}>
+        <h2 className={classes.Title} >
           Tačni Odgovori za oblast:{" "}
           <span style={{ color: "hsl(348, 100%, 61%)" }}>{props.tip}</span>
         </h2>

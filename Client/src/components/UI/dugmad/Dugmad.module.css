@@ -19,6 +19,7 @@
 .Next {
   color: hsl(171, 100%, 41%);
   border-color: hsl(171, 100%, 41%);
+ 
 }
 .Hint {
   color: hsl(348, 100%, 61%);
@@ -28,22 +29,28 @@
 .Rezultat {
   color: hsl(204, 86%, 53%);
   border-color: hsl(204, 86%, 53%);
+  
 }
 
 @media only screen and (max-width:768px){
+  .Dugme {
+    font-size: 14px;
+  }
   .Hint{
   width: 40%;
   position: static;
   left:0;
   top:0;
-  margin-bottom: 0.5em;
   padding: 10px;
+  margin-bottom: 0.5em;
+ margin-top: 0;
   }
 }
 .Next, .Rezultat{
 
-  padding: 12px;
+  padding: 10px;
   margin-top: 0.5em;
   width: 50%;
-  margin-bottom: 0.5em;
+ margin-bottom: 0.5em;
+
 }

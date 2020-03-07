@@ -182,14 +182,14 @@ export default class Quiz extends Component {
       );
       dugmeKomponenta = (
         <Dugme btnType="Next" clicked={this.nextDugmeHandler}>
-          Sledeće Pitanje
+         SLEDECE PITANJE
         </Dugme>
       );
 
       if (this.state.poslednjePitanje) {
         dugmeKomponenta = (
           <Dugme btnType="Rezultat" clicked={this.vidiRezultat}>
-            Vidi Rezultat
+            VIDI REZULTAT
           </Dugme>
         );
       }
@@ -213,6 +213,7 @@ export default class Quiz extends Component {
       <div className={[classes.Quiz, classes[this.props.tipQ]].join(" ")}>
         <div className={classes.Slika}>Slika</div>
          <div className={classes.PitanjeFlex}>
+         {timeBar}
         {pitanjeKomponenta}
          {dugmeKomponenta}
          </div>
@@ -224,7 +225,7 @@ export default class Quiz extends Component {
         >
           <Rezultat bodovi={this.state.rezultat} nadimak={this.props.ime} />
         </Modal>
-        {timeBar}
+        
       </div>
     );
   }

@@ -9,7 +9,8 @@ import Quiz from './containers/Quiz/Quiz';
 import Pocetna from './containers/Pocetna/Pocetna';
 import TacniOdg from './components/TacniOdgovori/TacniOdg';
 import RangLista from './containers/Rezultati/RangLista';
-import TvojiRezultati from './containers/Rezultati/TvojiRezultati'
+import TvojiRezultati from './containers/Rezultati/TvojiRezultati';
+import Error from './components/Error'
 
 axios.defaults.withCredentials = true;
 
@@ -61,6 +62,7 @@ class App extends Component {
          stejtsetNadimak = {this.setNadimak} stejtSetTip = {this.setTip} 
          setujPitanja={this.setPitanja} pitanija={this.state.pitanja} 
          />} />
+          <Route component={Error} />
         </Switch>
         
           </Layout>
