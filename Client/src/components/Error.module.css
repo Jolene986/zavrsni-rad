@@ -1,6 +1,22 @@
 .Error {
+    height: 100vh;
+    width: 100vw;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.Error img {
+    width: 250px;
+    height: 250px;
+}
+.Error a {
+
+    text-decoration: none;
+    font-size: 25px;
+    color:#56ab2f
+}
+.Error h1 {
+    color: rgb(250, 53, 53);
+    font-size: 40px;
 }

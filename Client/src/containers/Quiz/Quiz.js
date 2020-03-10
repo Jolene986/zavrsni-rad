@@ -149,7 +149,7 @@ export default class Quiz extends Component {
   render() {
     let pitanjeKomponenta = (
       <Link to="/">
-        Nesto nije uredu..vrati se na pocetnu stranu da zapocnes kviz
+ NESTO NIJE UREDU. VRATI SE NA POCETAK DA ZAPOCNES KVIZ
       </Link>
     );
     let hintKomponenta = null;
@@ -195,7 +195,7 @@ export default class Quiz extends Component {
       }
     }
     if (this.props.tClock) {
-      let boja = "hsl(171, 100%, 41%)";
+      let boja = "#56ab2f";
       if (this.state.width <= 20) {
         boja = "hsl(348, 100%, 61%)";
       }
@@ -208,10 +208,12 @@ export default class Quiz extends Component {
         </div>
       );
     }
-
+   
     return (
       <div className={[classes.Quiz, classes[this.props.tipQ]].join(" ")}>
-        <div className={classes.Slika}>Slika</div>
+        <div className={classes.Slika}>
+         slika
+        </div>
          <div className={classes.PitanjeFlex}>
          {timeBar}
         {pitanjeKomponenta}

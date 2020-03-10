@@ -12,8 +12,8 @@
 .životinje {
     
     background: #22c1c3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to top, #517ef8, #38c1c4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #517ef8, #38c1c4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
  
 }
@@ -43,16 +43,21 @@ background: linear-gradient(to bottom, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10
     transition: width 0.2s ease-in
 }
 .Slika {
-     
+     color:transparent;
 }
 .PitanjeFlex {
     width: 45%;
-    height: 100%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     
+}
+.PitanjeFlex a {
+    font-size: 40px;
+    text-decoration: none;
+    margin-top: 5em;
 }
 @media only screen and (max-width:768px){
     .Quiz {
@@ -71,5 +76,6 @@ background: linear-gradient(to bottom, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10
     .Wrap {
         width: 100%;
         margin-top: 0;
+        margin-bottom: 0.3em;
     }
 }
